@@ -70,6 +70,9 @@ public class AdapterforRecyclerView extends RecyclerView.Adapter<AdapterforRecyc
             age = itemView.findViewById(R.id.emp_age);
         }
 
+        public void bind(Employee employee, SetCustomClickListener listener) {
+        }
+
 
 //        public  void bind(final Employee e , final SetCustomClickListener listener)
 //        {
