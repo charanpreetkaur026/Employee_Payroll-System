@@ -1,0 +1,4 @@
+package com.example.employeepayrollsystem.models;
+
+public class FixedBasedPartTime {
+}
