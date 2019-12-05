@@ -9,7 +9,7 @@ public class Singleton {
     private Singleton(){
         employees = new ArrayList<>();
         //create objects of employee classes here
-
+     CommissionbasedPartTime emp_cp = new CommissionbasedPartTime(1, "preet", 20, 1000.50, 1993, )
 
     }
     //to add employee objects to list

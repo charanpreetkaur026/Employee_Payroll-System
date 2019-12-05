@@ -8,8 +8,8 @@ public class CommissionbasedPartTime extends  PartTime {
 
     public void setCommission(int commission) { this.commission = commission; }
 
-    public CommissionbasedPartTime(int id, String name, int age, double earnings, int birthYear, int rate, float hours, float commission) {
-        super(id, name, age, earnings, birthYear, rate, hours);
+    public CommissionbasedPartTime(int id, String name, int age, double earnings, int birthYear,Vehicle vehicle, int rate, float hours, float commission) {
+        super(id, name, age, earnings, birthYear,vehicle, rate, hours);
         this.commission = commission;
     }
 }
