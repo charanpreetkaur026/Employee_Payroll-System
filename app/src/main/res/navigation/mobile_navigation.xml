@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/nav_employees"
-        android:name="com.example.employeepayrollsystem.ui.gallery.GalleryFragment"
+        android:name="com.example.employeepayrollsystem.ui.ContactUs.ContactUsFragment"
         android:label="@string/menu_employees"
-        tools:layout="@layout/fragment_employees" />
+        tools:layout="@layout/fragment_employee" />
 
     <fragment
         android:id="@+id/nav_addEmpoyee"
@@ -30,14 +30,14 @@
         tools:layout="@layout/fragment_add_vehicle" />
 
     <fragment
-        android:id="@+id/nav_share"
-        android:name="com.example.employeepayrollsystem.ui.share.ShareFragment"
+        android:id="@+id/nav_about_us"
+        android:name="com.example.employeepayrollsystem.ui.about_us.AboutUsFragment"
         android:label="@string/menu_aboutus"
-        tools:layout="@layout/fragment_share" />
+        tools:layout="@layout/fragment_about_us" />
 
     <fragment
-        android:id="@+id/nav_send"
-        android:name="com.example.employeepayrollsystem.ui.Employees.EmployeesFragment"
+        android:id="@+id/nav_contact"
+        android:name="com.example.employeepayrollsystem.ui.ContactUs.ContactUsFragment"
         android:label="@string/menu_employees"
         tools:layout="@layout/fragment_employee" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.employeepayrollsystem.ui.gallery;
+package com.example.employeepayrollsystem.ui.about_us;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.employeepayrollsystem.R;
 
-public class GalleryFragment extends Fragment {
+public class AboutUsFragment extends Fragment {
 
-    private GalleryViewModel galleryViewModel;
+    private ShareViewModel shareViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        galleryViewModel =
-                ViewModelProviders.of(this).get(GalleryViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_employees, container, false);
-        final TextView textView = root.findViewById(R.id.text_gallery);
-        galleryViewModel.getText().observe(this, new Observer<String>() {
+        shareViewModel =
+                ViewModelProviders.of(this).get(ShareViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_about_us, container, false);
+        final TextView textView = root.findViewById(R.id.text_about_us);
+        shareViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
