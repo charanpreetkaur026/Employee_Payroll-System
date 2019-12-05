@@ -4,7 +4,7 @@ public class PartTime extends Employee {
 
     private int rate;
     private float hours;
-    public PartTime(int id, String name, int age, double earnings, int birthYear) {
+    public PartTime(int id, String name, int age, double earnings, int birthYear, int rate, float hours) {
         super(id, name, age, earnings, birthYear);
     }
 
