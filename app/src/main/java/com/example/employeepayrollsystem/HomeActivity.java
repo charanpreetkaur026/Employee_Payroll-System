@@ -5,8 +5,12 @@ import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.view.MenuItem;
 import android.view.View;
 
+import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -66,4 +70,32 @@ public class HomeActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+//    public void setUpNavigateDrawer()
+//    {
+//        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener()
+//        {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
+//            {
+//                FragmentManager mFragmentManager = getSupportFragmentManager();
+//                FragmentTransaction mFragmentTransaction = mFragmentManager.beginTransaction();
+//
+//                switch (menuItem.getItemId())
+//                {
+//                    case R.id.nav_home:
+//                        mFragmentTransaction.replace(R.id.container, new HomeFragment());
+//                        break;
+//
+//                    case R.id.nav_gallery:
+//                        mFragmentTransaction.replace(R.id.container, new GalleryFragment());
+//                        break;
+//
+//                }
+//
+//                mFragmentTransaction.commit();
+//                drawer.closeDrawers();
+//                return true;
+//            }
+//        });
+//    }
 }

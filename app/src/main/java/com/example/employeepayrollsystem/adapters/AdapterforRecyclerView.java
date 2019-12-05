@@ -70,12 +70,11 @@ public class AdapterforRecyclerView extends RecyclerView.Adapter<AdapterforRecyc
             age = itemView.findViewById(R.id.emp_age);
         }
 
-        public void bind(Employee employee, SetCustomClickListener listener) {
-        }
 
 
-//        public  void bind(final Employee e , final SetCustomClickListener listener)
-//        {
+
+        public  void bind(final Employee e , final SetCustomClickListener listener)
+        {
 //            if(e.getGen() == Gender.MALE )
 //            {
 //                gender.setText("MALE");
@@ -84,16 +83,16 @@ public class AdapterforRecyclerView extends RecyclerView.Adapter<AdapterforRecyc
 //            {
 //                gender.setText("FEMALE");
 //            }
-//
-//            name.setText("Name : "+e.getName());
-//            age.setText("Age : "+e.getAge());
-//
-//            itemView.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    listener.customOnClick(e);
-//                }
-//            });
-//        }
+
+            name.setText("Name : "+e.getName());
+            age.setText("Age : "+e.getAge());
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listener.customOnClick(e);
+                }
+            });
+        }
     }
 }
