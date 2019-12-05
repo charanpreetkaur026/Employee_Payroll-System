@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.employeepayrollsystem.R;
@@ -43,6 +44,8 @@ public class EmployeesFragment extends Fragment {
                 Toast.makeText(EmployeesFragment.this.con, e.getName(), Toast.LENGTH_LONG).show();
             }
         });
+        this.recyclerView.setAdapter(adapter);
+        this.recyclerView.setLayoutManager(new LinearLayoutManager(this.con));
         final TextView textView = root.findViewById(R.id.text_employees);
 
         return root;
