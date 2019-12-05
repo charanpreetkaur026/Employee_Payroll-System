@@ -1,5 +1,6 @@
 package com.example.employeepayrollsystem;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -29,9 +30,23 @@ public class LoginActivity extends AppCompatActivity {
                         && (edtPassword.getText().toString().trim().equals("admin123"))){
                     Intent mIntent = new Intent(LoginActivity.this, HomeActivity.class);
                     startActivity(mIntent);
-
+                }else {
+                    btnLogin.setAlpha(.5f);
+                    edtEmail.setError("Please enter valid email or password");
+                    showAlert();
                 }
             }
         });
+    }
+    public void showAlert()
+    {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        //alertDialogBuilder.setIcon(R.drawable.bb8);
+        alertDialogBuilder.setTitle("Login error");
+
+
+        //alertDialogBuilder.setNegativeButtonIcon(getResources().getDrawable(R.drawable.bb8));
+        AlertDialog mAlertDialog=alertDialogBuilder.create();
+        mAlertDialog.show();
     }
 }
