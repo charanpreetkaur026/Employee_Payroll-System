@@ -12,22 +12,22 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_employees"
         android:name="com.example.employeepayrollsystem.ui.gallery.GalleryFragment"
         android:label="@string/menu_employees"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_employees" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.employeepayrollsystem.ui.slideshow.SlideshowFragment"
+        android:id="@+id/nav_addEmpoyee"
+        android:name="com.example.employeepayrollsystem.ui.add_employee.AddEmployeeFragment"
         android:label="@string/menu_add_employee"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_add_employee" />
 
     <fragment
-        android:id="@+id/nav_tools"
-        android:name="com.example.employeepayrollsystem.ui.tools.ToolsFragment"
+        android:id="@+id/nav_add_vehicle"
+        android:name="com.example.employeepayrollsystem.ui.add_vehicle.AddVehicleFragment"
         android:label="@string/menu_vehicle"
-        tools:layout="@layout/fragment_tools" />
+        tools:layout="@layout/fragment_add_vehicle" />
 
     <fragment
         android:id="@+id/nav_share"
@@ -37,7 +37,7 @@
 
     <fragment
         android:id="@+id/nav_send"
-        android:name="com.example.employeepayrollsystem.ui.send.SendFragment"
-        android:label="@string/menu_contactus"
-        tools:layout="@layout/fragment_send" />
+        android:name="com.example.employeepayrollsystem.ui.Employees.EmployeesFragment"
+        android:label="@string/menu_employees"
+        tools:layout="@layout/fragment_employee" />
 </navigation>
