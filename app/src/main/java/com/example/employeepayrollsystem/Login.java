@@ -24,7 +24,10 @@ public class Login extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if()
+                if(edtEmail.getText().toString().trim().equals("admin@payroll.com")
+                        && (edtPassword.getText().toString().trim().equals("admin123"))){
+
+                }
             }
         });
     }
