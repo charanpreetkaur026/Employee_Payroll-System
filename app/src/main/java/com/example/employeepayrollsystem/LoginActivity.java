@@ -20,21 +20,23 @@ public class LoginActivity extends AppCompatActivity {
         edtEmail =findViewById(R.id.edtEmail);
         edtPassword =findViewById(R.id.edtPassword);
         btnLogin = findViewById(R.id.btnLogin);
-
+buttonClick();
     }
     public void buttonClick(){
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(edtEmail.getText().toString().trim().equals("admin@payroll.com")
-                        && (edtPassword.getText().toString().trim().equals("admin123"))){
-                    Intent mIntent = new Intent(LoginActivity.this, HomeActivity.class);
+                Intent mIntent = new Intent(LoginActivity.this, HomeActivity.class);
                     startActivity(mIntent);
-                }else {
-                    btnLogin.setAlpha(.5f);
-                    edtEmail.setError("Please enter valid email or password");
-                    showAlert();
-                }
+//                if(edtEmail.getText().toString().trim().equals(R.string.login_email)
+//                        && (edtPassword.getText().toString().trim().equals(R.string.login_password))){
+//                    Intent mIntent = new Intent(LoginActivity.this, HomeActivity.class);
+//                    startActivity(mIntent);
+//                }else {
+//                    btnLogin.setAlpha(.5f);
+//                    edtEmail.setError("Please enter valid email or password");
+//                    showAlert();
+//                }
             }
         });
     }
