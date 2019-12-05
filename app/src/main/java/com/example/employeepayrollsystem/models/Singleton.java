@@ -9,7 +9,11 @@ public class Singleton {
     private Singleton(){
         employees = new ArrayList<>();
         //create objects of employee classes here
-     CommissionbasedPartTime emp_cp = new CommissionbasedPartTime(1, "preet", 20, 1000.50, 1993, )
+     CommissionbasedPartTime emp_cp = new CommissionbasedPartTime(1, "preet", 20, 1000.50, 1995,
+             16, 20, 150, new Car("Audi", "PB08", "A4"));
+     FixedBasedPartTime emp_fp = new FixedBasedPartTime(2, "deep", 21, 1200.30, 1996,
+             14, 40, 130, new Motorcycle("Royal Enfield", "PBO9", "Bullet"));
+
 
     }
     //to add employee objects to list
@@ -21,5 +25,14 @@ public class Singleton {
     public ArrayList<Employee> getList()
     {
         return  ((ArrayList<Employee>)this.employees);
+    }
+    public static Singleton getSingletonObjObj()
+    {
+        if(singletonObj == null)
+        {
+            singletonObj = new Singleton();
+
+        }
+        return singletonObj;
     }
 }

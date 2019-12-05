@@ -9,14 +9,21 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.employeepayrollsystem.R;
+import com.example.employeepayrollsystem.models.Employee;
+import com.example.employeepayrollsystem.models.Singleton;
+
+import java.util.ArrayList;
 
 public class EmployeesFragment extends Fragment {
-
+    ArrayList<Employee> employees_list;
     Context con;
     RecyclerView recyclerView;
+    FragmentTransaction fragmentTransaction;
+
 
 
 
@@ -25,6 +32,8 @@ public class EmployeesFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_employees, container, false);
+        employees_list= Singleton.getSingletonObjObj().getList();
+        this.recyclerView = root.findViewById(R.id.recycler_view);
         final TextView textView = root.findViewById(R.id.text_employees);
 
         return root;
