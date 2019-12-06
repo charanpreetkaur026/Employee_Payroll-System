@@ -100,9 +100,9 @@ public class EmployeeDetailsFragment extends Fragment implements DataFromEmploye
             else
             {
                 this.employment_type.setText("Fixed BASED");
-                commission_fixedamount_label.setText("FIXED AMOUNT");
-                commission_fixedamount_value.setText("$ "+((FixedBasedPartTime) employee).getFixedAmount());
-                //this.total_earning.setText("$ "+((FixedBasedPartTime)employee).fixedAmountCalcEarnings());
+//                commission_fixedamount_label.setText("FIXED AMOUNT");
+//                commission_fixedamount_value.setText("$ "+((FixedBasedPartTime) employee).getFixedAmount());
+                this.total_earning.setText("$ "+((FixedBasedPartTime)employee).fixedAmountCalcEarnings());
             }
 
 
