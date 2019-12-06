@@ -100,11 +100,11 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
                         {
                             AddEmployeeFragment.this.internFragment = new InternFragment();
                              }
-                        fragmentTransaction = AddEmployeeFragment.this.fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.frame_layout_employment, AddEmployeeFragment.this.internFragment);
-                        fragmentTransaction.commit();
-                        Toast.makeText(AddEmployeeFragment.this.getContext(), "intern" , Toast.LENGTH_LONG).show();
-                        break;
+//                        fragmentTransaction = AddEmployeeFragment.this.fragmentManager.beginTransaction();
+//                        fragmentTransaction.replace(R.id.frame_layout_employment, AddEmployeeFragment.this.internFragment);
+//                        fragmentTransaction.commit();
+//                        Toast.makeText(AddEmployeeFragment.this.getContext(), "intern" , Toast.LENGTH_LONG).show();
+//                        break;
                 }
             }
         });
