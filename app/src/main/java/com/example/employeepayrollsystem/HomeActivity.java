@@ -1,7 +1,9 @@
 package com.example.employeepayrollsystem;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.employeepayrollsystem.ui.ContactUs.ContactUsFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -39,7 +41,9 @@ public class HomeActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                Intent intent = new Intent(HomeActivity.this, ContactUsFragment.class);
+//                startActivity(intent);
+                Snackbar.make(view, "Email us at: admin@payroll.com", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });

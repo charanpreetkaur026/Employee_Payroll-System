@@ -54,7 +54,7 @@ public class EmployeesFragment extends Fragment {
 //               // fragmentTransaction.
                 fragmentTransaction.replace(R.id.nav_host_fragment, employeeDetailsFragment, "");
                 fragmentTransaction.commit();
-                fragmentTransaction.addToBackStack(null);
+                //fragmentTransaction.addToBackStack(null);
             }
         });
         this.recyclerView.setAdapter(adapter);

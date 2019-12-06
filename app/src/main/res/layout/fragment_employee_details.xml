@@ -4,28 +4,30 @@
     android:id="@+id/text_total_earning_value"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/colorPrimary">
+    android:background="@color/secondaryShrinePink"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/text_employment_type_value"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/primaryShrinePink"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:padding="10dp"
         android:text="TextView"
-        android:textSize="18sp"
-        android:background="@color/lightBrown"/>
+        android:textColor="@color/black"
+        android:textSize="18sp" />
 
-  <androidx.cardview.widget.CardView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/white">
 
             <TextView
                 android:id="@+id/text_name_label"
@@ -34,6 +36,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="NAME"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -44,6 +47,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="28dp"
                 android:text="AGE"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/text_name_label" />
 
@@ -54,6 +58,8 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="GENDER"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_age_label" />
 
@@ -64,6 +70,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="11dp"
                 android:text="VEHICLE"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_gender_label" />
 
@@ -74,6 +81,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="TextView"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -84,6 +92,7 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="8dp"
                 android:text="TextView"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_name_value" />
 
@@ -94,6 +103,7 @@
                 android:layout_marginTop="11dp"
                 android:layout_marginEnd="8dp"
                 android:text="TextView"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_age_value" />
 
@@ -104,6 +114,7 @@
                 android:layout_marginTop="11dp"
                 android:layout_marginEnd="8dp"
                 android:text="TextView"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_gender_value" />
 
@@ -117,12 +128,14 @@
         android:layout_height="1dp"
         android:background="?android:attr/listDivider"
         android:padding="20dp" />
-<androidx.cardview.widget.CardView
+
+    <androidx.cardview.widget.CardView
         android:id="@+id/parttime_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20dp">
-<androidx.constraintlayout.widget.ConstraintLayout
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -133,6 +146,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="RATE PER HOUR"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -144,7 +158,8 @@
                 android:layout_marginTop="11dp"
                 android:text="NUMBER OF HOURS"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_rate_label" />
+                app:layout_constraintTop_toBottomOf="@+id/text_rate_label"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/text_commission_fixedamount_label"
@@ -154,7 +169,8 @@
                 android:layout_marginTop="14dp"
                 android:text="TextView"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_hours_label" />
+                app:layout_constraintTop_toBottomOf="@+id/text_hours_label"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/text_rate_value"
@@ -164,7 +180,8 @@
                 android:layout_marginEnd="8dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/text_hours_value"
@@ -174,7 +191,8 @@
                 android:layout_marginEnd="8dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_rate_value" />
+                app:layout_constraintTop_toBottomOf="@+id/text_rate_value"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/text_commission_fixedamount_value"
@@ -184,7 +202,8 @@
                 android:layout_marginEnd="8dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_hours_value" />
+                app:layout_constraintTop_toBottomOf="@+id/text_hours_value"
+                android:textColor="@color/black"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
@@ -206,7 +225,8 @@
                 android:layout_marginTop="8dp"
                 android:text="SALARY"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/text_bonus_label"
@@ -216,7 +236,8 @@
                 android:layout_marginTop="8dp"
                 android:text="BONUS"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_salary_label" />
+                app:layout_constraintTop_toBottomOf="@+id/text_salary_label"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/text_salary_value"
@@ -226,7 +247,8 @@
                 android:layout_marginEnd="8dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/text_bonus_value"
@@ -236,10 +258,12 @@
                 android:layout_marginEnd="8dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_salary_value" />
+                app:layout_constraintTop_toBottomOf="@+id/text_salary_value"
+                android:textColor="@color/black"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-<androidx.cardview.widget.CardView
+
+    <androidx.cardview.widget.CardView
         android:id="@+id/intern_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -256,7 +280,9 @@
                 android:layout_marginTop="8dp"
                 android:text="STIPHEND"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/black"/>
+
             <TextView
                 android:id="@+id/text_school_label"
                 android:layout_width="wrap_content"
@@ -265,7 +291,9 @@
                 android:layout_marginTop="36dp"
                 android:text="SCHOOL NAME"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/black"/>
+
             <TextView
                 android:id="@+id/text_stiphend_value"
                 android:layout_width="wrap_content"
@@ -274,7 +302,9 @@
                 android:layout_marginEnd="8dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/black"/>
+
             <TextView
                 android:id="@+id/text_school_value"
                 android:layout_width="wrap_content"
@@ -283,7 +313,8 @@
                 android:layout_marginEnd="8dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_stiphend_value" />
+                app:layout_constraintTop_toBottomOf="@+id/text_stiphend_value"
+                android:textColor="@color/black"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
@@ -310,7 +341,8 @@
                 android:layout_marginTop="8dp"
                 android:text="TOTAL EARNING"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/text_total_earning_val"
@@ -320,7 +352,8 @@
                 android:layout_marginEnd="8dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/black"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
