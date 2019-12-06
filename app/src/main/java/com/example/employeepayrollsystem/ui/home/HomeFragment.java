@@ -1,6 +1,7 @@
 package com.example.employeepayrollsystem.ui.home;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +25,7 @@ private  TextView txtHome;
         View root = inflater.inflate(R.layout.fragment_home, container, false);
        txtHome = root.findViewById(R.id.text_home);
         txtHome.setText(R.string.homefragment_message);
+        Log.e("TAG", "HomeFragment");
         return root;
     }
 }

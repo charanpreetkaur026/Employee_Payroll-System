@@ -1,6 +1,7 @@
 package com.example.employeepayrollsystem.ui.about_us;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,8 @@ public class AboutUsFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.fragment_about_us, container, false);
         final TextView textView = root.findViewById(R.id.text_about_us);
+        Log.e("TAG", "AboutUsFragment");
+
 
         return root;
     }

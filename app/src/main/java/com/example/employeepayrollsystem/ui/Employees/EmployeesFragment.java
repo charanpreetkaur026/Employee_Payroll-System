@@ -2,6 +2,7 @@ package com.example.employeepayrollsystem.ui.Employees;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +35,8 @@ public class EmployeesFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-
+        this.con = inflater.getContext();
+        Log.e("TAG","inside onCreateView");
         View root = inflater.inflate(R.layout.fragment_employees, container, false);
         employees_list= Singleton.getSingletonObjObj().getList();
         this.recyclerView = root.findViewById(R.id.recycler_view);

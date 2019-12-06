@@ -14,7 +14,8 @@ public class Singleton {
      FixedBasedPartTime emp_fp = new FixedBasedPartTime(2, "deep", 21, 1200.30, 1996,
              14, 40, 130, new Motorcycle("Royal Enfield", "PBO9", "Bullet"));
 
-
+addtoList(emp_cp);
+addtoList(emp_fp);
     }
     //to add employee objects to list
     public void addtoList(Employee emp)

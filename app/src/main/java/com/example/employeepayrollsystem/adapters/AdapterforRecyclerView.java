@@ -15,16 +15,9 @@ import com.example.employeepayrollsystem.models.Employee;
 import java.util.ArrayList;
 
 public class AdapterforRecyclerView extends RecyclerView.Adapter<AdapterforRecyclerView.ViewHolder> {
-
-
-
-
     public interface SetCustomClickListener{
         void customOnClick(Employee e);
     }
-
-
-
     ArrayList<Employee> arrayList;
     Context context;
     SetCustomClickListener listener;
