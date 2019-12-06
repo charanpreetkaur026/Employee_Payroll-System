@@ -32,7 +32,8 @@
                     android:ems="10"
                     android:hint="Employee name."
                     android:inputType="textPersonName"
-                    android:padding="10dp" />
+                    android:padding="10dp"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/text_date_of_birth"
@@ -40,13 +41,16 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:text="DateOfBirth : YYYY/MM/DD"
+                    android:textColor="@color/black"
                     tools:layout_editor_absoluteX="16dp"
                     tools:layout_editor_absoluteY="87dp" />
 
                 <TextView
                     android:id="@+id/text_age"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:textColor="@color/black" />
 
                 <RadioGroup
                     android:id="@+id/radio_group_vehicle"
@@ -65,7 +69,8 @@
                         android:layout_height="30dp"
                         android:layout_weight="1"
                         android:gravity="top"
-                        android:text="VEHICLE   :   " />
+                        android:text="VEHICLE   :   "
+                        android:textColor="@color/black" />
 
                     <RadioButton
                         android:id="@+id/radio_car"
@@ -101,7 +106,8 @@
                         android:layout_height="30dp"
                         android:layout_weight="1"
                         android:gravity="top"
-                        android:text="EMPLOYMENT   :   " />
+                        android:text="EMPLOYMENT   :   "
+                        android:textColor="@color/black" />
 
                     <RadioButton
                         android:id="@+id/radio_fulltime"

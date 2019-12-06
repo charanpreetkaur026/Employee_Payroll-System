@@ -4,7 +4,10 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,9 +23,11 @@ public class PartTimeFragment extends Fragment {
     RadioGroup gender;
     TextView dateOfBirth;
     RadioGroup vehicle;
-
     TextView ratePerHour;
     TextView numberOfHours;
+    RadioGroup parttimeType;
+    FragmentManager fragmentManager;
+
 
 
     private OnFragmentInteractionListener mListener;
@@ -31,21 +36,13 @@ public class PartTimeFragment extends Fragment {
         // Required empty public constructor
     }
 
-
-    public static PartTimeFragment newInstance(String param1, String param2) {
-        PartTimeFragment fragment = new PartTimeFragment();
-        Bundle args = new Bundle();
-
-        fragment.setArguments(args);
-        return fragment;
-    }
-
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-
-        }
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        this.ratePerHour = view.findViewById(R.id.text_rateper_hour);
+        this.numberOfHours = view.findViewById(R.id.text_number_of_hours);
+        this.fragmentManager = getActivity().getSupportFragmentManager();
+        this.parttimeType = getActivity().findViewById(R.id.radio_group_parttime_type);
     }
 
     @Override
@@ -53,13 +50,6 @@ public class PartTimeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_part_time, container, false);
-    }
-
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
     }
 
     @Override
@@ -81,7 +71,6 @@ public class PartTimeFragment extends Fragment {
 
 
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 }

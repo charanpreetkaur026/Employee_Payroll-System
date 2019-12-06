@@ -30,7 +30,7 @@ public class DatePickerFragment extends DialogFragment {
                 TextView text_age = getActivity().findViewById(R.id.text_age);
                 text_age.setText("Age : "+age);
 
-                //text_dob.setText(SpanningForString.forDate((String)"DateOfBirth : "+yyyy+"/"+(mm+1)+"/"+dd));
+                text_dob.setText("DateOfBirth : "+yyyy+"/"+(mm+1)+"/"+dd);
             }
         },year,month,day);
     }

@@ -64,6 +64,8 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
         this.text_name = view.findViewById(R.id.text_name);
         this.text_date_of_birth = view.findViewById(R.id.text_date_of_birth);
         this.employementtype = view.findViewById(R.id.radio_group_employment);
+        //date picker
+        this.text_date_of_birth.setOnClickListener(this);
         this.employementtype.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -74,8 +76,7 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
                 {
                     case R.id.radio_parttime :
                         if(AddEmployeeFragment.this.partTimeFragment  == null)
-                        {
-                            AddEmployeeFragment.this.partTimeFragment = new PartTimeFragment();
+                        { AddEmployeeFragment.this.partTimeFragment = new PartTimeFragment();
 
                         }
                         fragmentTransaction = AddEmployeeFragment.this.fragmentManager.beginTransaction();
