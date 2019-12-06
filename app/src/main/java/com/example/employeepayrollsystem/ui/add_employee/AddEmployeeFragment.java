@@ -19,6 +19,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.employeepayrollsystem.DatePickerFragment;
 import com.example.employeepayrollsystem.R;
 import com.example.employeepayrollsystem.ui.Employees.FullTimeFragment;
 import com.example.employeepayrollsystem.ui.Employees.InternFragment;
@@ -114,35 +115,7 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
         dtfragment.show(getActivity().getSupportFragmentManager(), "DatePicker");
 
     }
-//    public void DatePickerBox(){
-//        //https://github.com/charanpreetkaur026/C0766112_F2019_MAD3125_MidTerm/blob/master/app/src/main/java/com/example/c0766112_f2019_mad3125_midterm/MainActivity.java
-//        final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
-//            @Override
-//            public void onDateSet(DatePicker view, int year, int monthOfYear,
-//                                  int dayOfMonth) {
-//                calendar.set(Calendar.YEAR, year);
-//                calendar.set(Calendar.MONTH, monthOfYear);
-//                calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-//                dateFormat();
-//            }
-//        };
-//        text_date_of_birth.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                new DatePickerDialog(AddEmployeeFragment.this, date, calendar.get(Calendar.YEAR),
-//                        calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH)).show();
-//            }
-//        });
-//        text_date_of_birth.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                new DatePickerDialog(AddEmployeeFragment.this, date, calendar
-//                        .get(Calendar.YEAR), calendar.get(Calendar.MONTH),
-//                        calendar.get(Calendar.DAY_OF_MONTH)).show();
-//            }
-//        });
 
-    //}
     private String dateFormat() {
         //https://stackoverflow.com/questions/14933330/datepicker-how-to-popup-datepicker-when-click-on-edittext
         String myFormat = "dd-MMM-yyyy"; //In which you need put here
