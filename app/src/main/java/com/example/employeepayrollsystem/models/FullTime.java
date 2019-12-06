@@ -31,4 +31,6 @@ public class FullTime extends Employee
         this.bonus = bonus;
     }
 
+    
+
 }
