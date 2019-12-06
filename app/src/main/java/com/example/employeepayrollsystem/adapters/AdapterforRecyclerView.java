@@ -1,6 +1,7 @@
 package com.example.employeepayrollsystem.adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,27 +53,18 @@ public class AdapterforRecyclerView extends RecyclerView.Adapter<AdapterforRecyc
     class ViewHolder extends  RecyclerView.ViewHolder{
 
         TextView name;
-
         TextView age;
-
-
         public ViewHolder(@NonNull View View) {
             super(View);
             name = itemView.findViewById(R.id.emp_name);
-
             age = itemView.findViewById(R.id.emp_age);
         }
 
-
-
-
         public  void bind(final Employee e , final SetCustomClickListener listener)
         {
-
-
+            Log.e("TAG", "adapter showing name");
             name.setText("Name : "+e.getName());
             age.setText("Age : "+e.getAge());
-
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
