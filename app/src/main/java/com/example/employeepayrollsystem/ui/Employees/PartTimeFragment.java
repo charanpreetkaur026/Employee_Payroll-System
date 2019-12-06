@@ -15,9 +15,10 @@ import android.view.ViewGroup;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.example.employeepayrollsystem.Interface.DataFromAddEmployeeFragment;
 import com.example.employeepayrollsystem.R;
 
-public class PartTimeFragment extends Fragment {
+public class PartTimeFragment extends Fragment implements DataFromAddEmployeeFragment {
     TextView name;
     TextView age;
     RadioGroup gender;
@@ -31,10 +32,6 @@ public class PartTimeFragment extends Fragment {
 
 
     private OnFragmentInteractionListener mListener;
-
-    public PartTimeFragment() {
-        // Required empty public constructor
-    }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -53,20 +50,13 @@ public class PartTimeFragment extends Fragment {
     }
 
     @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
+    public void getViewsFromAddEmployeeFragment(TextView name, TextView age,
+                                                RadioGroup gender, TextView date, RadioGroup vehicle) {
+        this.name =name;
+        this.age=age;
+        this.dateOfBirth=date;
+        this.vehicle = vehicle;
 
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
     }
 
 
