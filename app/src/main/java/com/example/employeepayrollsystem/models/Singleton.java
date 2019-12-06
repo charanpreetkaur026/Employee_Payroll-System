@@ -15,7 +15,7 @@ public class Singleton {
              14, 40, 130, new Motorcycle("Royal Enfield", "PBO9", "Bullet"));
 
         addtoList(emp_cp);
-        //addtoList(emp_fp);
+        addtoList(emp_fp);
     }
     //to add employee objects to list
     public void addtoList(Employee emp)
