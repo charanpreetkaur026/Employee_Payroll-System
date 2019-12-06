@@ -19,6 +19,7 @@ import com.example.employeepayrollsystem.R;
 import com.example.employeepayrollsystem.adapters.AdapterforRecyclerView;
 import com.example.employeepayrollsystem.models.Employee;
 import com.example.employeepayrollsystem.models.Singleton;
+import com.example.employeepayrollsystem.ui.employee_details.EmployeeDetailsFragment;
 
 import java.util.ArrayList;
 
@@ -28,6 +29,7 @@ public class EmployeesFragment extends Fragment {
     RecyclerView recyclerView;
     FragmentTransaction fragmentTransaction;
     AdapterforRecyclerView adapter;
+    EmployeeDetailsFragment employeeDetailsFragment;
 
 
 
@@ -44,6 +46,14 @@ public class EmployeesFragment extends Fragment {
             @Override
             public void customOnClick(Employee e) {
                 Toast.makeText(EmployeesFragment.this.con, e.getName(), Toast.LENGTH_LONG).show();
+                if(employeeDetailsFragment == null){
+                    employeeDetailsFragment = new EmployeeDetailsFragment();
+                }
+                employeeDetailsFragment.;
+                fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.frame_layout, employeeDetailsFragment, "");
+                fragmentTransaction.commit();
+                fragmentTransaction.addToBackStack(null);
             }
         });
         this.recyclerView.setAdapter(adapter);
