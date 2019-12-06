@@ -9,17 +9,5 @@ public abstract class Vehicle {
         this.plate = plate;
     }
 
-    public String getMake() { return make; }
-
-    public void setMake(String make) {
-        this.make = make;
-    }
-
-    public String getPlate() {
-        return plate;
-    }
-
-    public void setPlate(String plate) {
-        this.plate = plate;
-    }
+    
 }
