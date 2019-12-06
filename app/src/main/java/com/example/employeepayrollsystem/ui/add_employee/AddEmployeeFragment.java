@@ -76,8 +76,9 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
                 {
                     case R.id.radio_parttime :
                         if(AddEmployeeFragment.this.partTimeFragment  == null)
-                        {
+                        { Log.e("TAG", "PartTime Radio selected");
                             AddEmployeeFragment.this.partTimeFragment = new PartTimeFragment();
+                            AddEmployeeFragment.this.partTimeFragment.getViewsFromAddEmployeeFragment(text_name,text_age,text_date_of_birth,vehicle);
                         }
                         fragmentTransaction = AddEmployeeFragment.this.fragmentManager.beginTransaction();
                         fragmentTransaction.replace(R.id.frame_layout_employment, AddEmployeeFragment.this.partTimeFragment);

@@ -51,13 +51,14 @@ public class PartTimeFragment extends Fragment implements DataFromAddEmployeeFra
 
     @Override
     public void getViewsFromAddEmployeeFragment(TextView name, TextView age,
-                                                RadioGroup gender, TextView date, RadioGroup vehicle) {
+                                                TextView date, RadioGroup vehicle) {
         this.name =name;
         this.age=age;
         this.dateOfBirth=date;
         this.vehicle = vehicle;
 
     }
+
 
 
     public interface OnFragmentInteractionListener {

@@ -5,5 +5,5 @@ import android.widget.TextView;
 
 public interface DataFromAddEmployeeFragment {
     void getViewsFromAddEmployeeFragment(TextView name, TextView age,
-                                         RadioGroup gender, TextView date, RadioGroup vehicle);
+                                          TextView date, RadioGroup vehicle);
 }
