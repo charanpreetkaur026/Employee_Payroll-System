@@ -57,16 +57,19 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
+    {
         super.onViewCreated(view, savedInstanceState);
         this.vehicle = view.findViewById(R.id.radio_group_vehicle);
         this.text_age = view.findViewById(R.id.text_age);
         this.text_name = view.findViewById(R.id.text_name);
         this.text_date_of_birth = view.findViewById(R.id.text_date_of_birth);
         this.employementtype = view.findViewById(R.id.radio_group_employment);
+
         //date picker
         this.text_date_of_birth.setOnClickListener(this);
-        this.employementtype.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        this.employementtype.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+        {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
@@ -75,6 +78,7 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
                 switch (checkedId)
                 {
                     case R.id.radio_parttime :
+
                         if(AddEmployeeFragment.this.partTimeFragment  == null)
                         { Log.e("TAG", "PartTime Radio selected");
                             AddEmployeeFragment.this.partTimeFragment = new PartTimeFragment();
@@ -87,10 +91,11 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
                         Toast.makeText(AddEmployeeFragment.this.getContext(), "parttime" , Toast.LENGTH_LONG).show();
                         break;
                     case R.id.radio_fulltime :
+
                         if(AddEmployeeFragment.this.fullTimeFragment  == null)
                         {
                             AddEmployeeFragment.this.fullTimeFragment = new FullTimeFragment();
-                              }
+                        }
 
                         fragmentTransaction = AddEmployeeFragment.this.fragmentManager.beginTransaction();
                         fragmentTransaction.replace(R.id.frame_layout_employment, AddEmployeeFragment.this.fullTimeFragment);
@@ -101,7 +106,7 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
                         if(AddEmployeeFragment.this.internFragment  == null)
                         {
                             AddEmployeeFragment.this.internFragment = new InternFragment();
-                             }
+                        }
 
                         fragmentTransaction = AddEmployeeFragment.this.fragmentManager.beginTransaction();
                         fragmentTransaction.replace(R.id.frame_layout_employment, AddEmployeeFragment.this.internFragment);
