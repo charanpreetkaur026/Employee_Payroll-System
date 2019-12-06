@@ -15,11 +15,13 @@ public class Intern extends Employee
         this.schoolname = schoolname;
     }
 
-    public String getSchoolname() {
+    public String getSchoolname()
+    {
         return schoolname;
     }
 
-    public void setSchoolname(String schoolname) {
+    public void setSchoolname(String schoolname)
+    {
         this.schoolname = schoolname;
     }
 
