@@ -51,6 +51,7 @@ public class EmployeesFragment extends Fragment {
                 }
                 employeeDetailsFragment.employeeObj(e);
                 fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+//               // fragmentTransaction.
                 fragmentTransaction.replace(R.id.nav_host_fragment, employeeDetailsFragment, "");
                 fragmentTransaction.commit();
                 fragmentTransaction.addToBackStack(null);
@@ -58,7 +59,7 @@ public class EmployeesFragment extends Fragment {
         });
         this.recyclerView.setAdapter(adapter);
         this.recyclerView.setLayoutManager(new LinearLayoutManager(this.con));
-        final TextView textView = root.findViewById(R.id.text_employees);
+        //final TextView textView = root.findViewById(R.id.text_employees);
 
         return root;
     }

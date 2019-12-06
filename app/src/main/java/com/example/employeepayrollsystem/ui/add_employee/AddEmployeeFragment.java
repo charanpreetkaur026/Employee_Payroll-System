@@ -15,7 +15,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.employeepayrollsystem.R;
 
-public class AddEmployeeFragment extends Fragment {
+public class AddEmployeeFragment extends Fragment implements View.OnClickListener{
 
 
 
@@ -26,5 +26,10 @@ public class AddEmployeeFragment extends Fragment {
         final TextView textView = root.findViewById(R.id.text_add_employee);
         Log.e("TAG", "AddEmployeeFragment");
         return root;
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }
