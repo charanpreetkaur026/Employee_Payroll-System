@@ -9,10 +9,20 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.example.employeepayrollsystem.R;
 
 public class PartTimeFragment extends Fragment {
+    TextView name;
+    TextView age;
+    RadioGroup gender;
+    TextView dateOfBirth;
+    RadioGroup vehicle;
+
+    TextView ratePerHour;
+    TextView numberOfHours;
 
 
     private OnFragmentInteractionListener mListener;
