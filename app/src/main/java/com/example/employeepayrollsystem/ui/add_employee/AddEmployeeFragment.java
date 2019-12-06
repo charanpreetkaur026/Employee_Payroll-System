@@ -80,16 +80,18 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
                             AddEmployeeFragment.this.partTimeFragment = new PartTimeFragment();
                             AddEmployeeFragment.this.partTimeFragment.getViewsFromAddEmployeeFragment(text_name,text_age,text_date_of_birth,vehicle);
                         }
-//                        fragmentTransaction = AddEmployeeFragment.this.fragmentManager.beginTransaction();
-//                        fragmentTransaction.replace(R.id.frame_layout_employment, AddEmployeeFragment.this.partTimeFragment);
-//                        fragmentTransaction.commit();
-//                        Toast.makeText(AddEmployeeFragment.this.getContext(), "parttime" , Toast.LENGTH_LONG).show();
-//                        break;
+
+                        fragmentTransaction = AddEmployeeFragment.this.fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layout_employment, AddEmployeeFragment.this.partTimeFragment);
+                        fragmentTransaction.commit();
+                        Toast.makeText(AddEmployeeFragment.this.getContext(), "parttime" , Toast.LENGTH_LONG).show();
+                        break;
                     case R.id.radio_fulltime :
                         if(AddEmployeeFragment.this.fullTimeFragment  == null)
                         {
                             AddEmployeeFragment.this.fullTimeFragment = new FullTimeFragment();
                               }
+
                         fragmentTransaction = AddEmployeeFragment.this.fragmentManager.beginTransaction();
                         fragmentTransaction.replace(R.id.frame_layout_employment, AddEmployeeFragment.this.fullTimeFragment);
                         fragmentTransaction.commit();
@@ -100,11 +102,12 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
                         {
                             AddEmployeeFragment.this.internFragment = new InternFragment();
                              }
-//                        fragmentTransaction = AddEmployeeFragment.this.fragmentManager.beginTransaction();
-//                        fragmentTransaction.replace(R.id.frame_layout_employment, AddEmployeeFragment.this.internFragment);
-//                        fragmentTransaction.commit();
-//                        Toast.makeText(AddEmployeeFragment.this.getContext(), "intern" , Toast.LENGTH_LONG).show();
-//                        break;
+
+                        fragmentTransaction = AddEmployeeFragment.this.fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layout_employment, AddEmployeeFragment.this.internFragment);
+                        fragmentTransaction.commit();
+                        Toast.makeText(AddEmployeeFragment.this.getContext(), "intern" , Toast.LENGTH_LONG).show();
+                        break;
                 }
             }
         });
