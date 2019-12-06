@@ -44,6 +44,18 @@ public abstract class Employee {
         this.name = name;
     }
 
-   
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) { this.age = age; }
+
+    public double getEarnings() { return earnings; }
+
+    public void setEarnings(double earnings) { this.earnings = earnings; }
+
+    public int getBirthYear() { return birthYear; }
+
+    public void setBirthYear(int birthYear) { this.birthYear = birthYear; }
 
 }
