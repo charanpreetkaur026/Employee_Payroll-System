@@ -35,12 +35,12 @@
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/emp_gender"
+                android:id="@+id/emp_type"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="TextView" />
+                android:text="employee type" />
 
 
         </LinearLayout>
