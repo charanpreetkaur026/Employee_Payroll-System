@@ -52,14 +52,14 @@ public class AdapterforRecyclerView extends RecyclerView.Adapter<AdapterforRecyc
     class ViewHolder extends  RecyclerView.ViewHolder{
 
         TextView name;
-        //TextView gender;
+
         TextView age;
 
 
         public ViewHolder(@NonNull View View) {
             super(View);
             name = itemView.findViewById(R.id.emp_name);
-            //gender = itemView.findViewById(R.id.emp_gender);
+
             age = itemView.findViewById(R.id.emp_age);
         }
 
@@ -68,14 +68,7 @@ public class AdapterforRecyclerView extends RecyclerView.Adapter<AdapterforRecyc
 
         public  void bind(final Employee e , final SetCustomClickListener listener)
         {
-//            if(e.getGen() == Gender.MALE )
-//            {
-//                gender.setText("MALE");
-//            }
-//            else
-//            {
-//                gender.setText("FEMALE");
-//            }
+
 
             name.setText("Name : "+e.getName());
             age.setText("Age : "+e.getAge());
