@@ -49,9 +49,9 @@ public class EmployeesFragment extends Fragment {
                 if(employeeDetailsFragment == null){
                     employeeDetailsFragment = new EmployeeDetailsFragment();
                 }
-                employeeDetailsFragment.;
+                employeeDetailsFragment.employeeObj(e);
                 fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.frame_layout, employeeDetailsFragment, "");
+                fragmentTransaction.replace(R.id.nav_host_fragment, employeeDetailsFragment, "");
                 fragmentTransaction.commit();
                 fragmentTransaction.addToBackStack(null);
             }
