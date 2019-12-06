@@ -92,17 +92,17 @@ public class EmployeeDetailsFragment extends Fragment implements DataFromEmploye
             if(employee instanceof CommissionbasedPartTime)
             {
                 this.employment_type.setText("COMMISSION BASED");
-//                commission_fixedamount_label.setText("COMMISSION");
-//                commission_fixedamount_value.setText(((CommissionbasedPartTime) employee).getCommission()+"%");
-                this.total_earning.setText("$ "+((CommissionbasedPartTime)employee).commissionCalcEarnings());
+                commission_fixedamount_label.setText("COMMISSION");
+                commission_fixedamount_value.setText(((CommissionbasedPartTime) employee).getCommission()+"%");
+               // this.total_earning.setText("$ "+((CommissionbasedPartTime)employee).commissionCalcEarnings());
 
             }
             else
             {
                 this.employment_type.setText("Fixed BASED");
-//                commission_fixedamount_label.setText("FIXED AMOUNT");
-//                commission_fixedamount_value.setText("$ "+((FixedBasedPartTime) employee).getFixedAmount());
-                this.total_earning.setText("$ "+((FixedBasedPartTime)employee).fixedAmountCalcEarnings());
+                commission_fixedamount_label.setText("FIXED AMOUNT");
+                commission_fixedamount_value.setText("$ "+((FixedBasedPartTime) employee).getFixedAmount());
+               // this.total_earning.setText("$ "+((FixedBasedPartTime)employee).fixedAmountCalcEarnings());
             }
 
 
