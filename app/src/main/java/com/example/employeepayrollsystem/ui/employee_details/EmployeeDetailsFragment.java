@@ -24,6 +24,7 @@ import com.example.employeepayrollsystem.models.PartTime;
 
 public class EmployeeDetailsFragment extends Fragment implements DataFromEmployeeCards {
     Employee employee;
+    TextView empId;
     TextView name;
     TextView age;
     TextView vehicle;
@@ -63,6 +64,7 @@ public class EmployeeDetailsFragment extends Fragment implements DataFromEmploye
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+//        this.empId = view.findViewById(R.id.text_)
         this.name = view.findViewById(R.id.text_name_value);
         this.age = view.findViewById(R.id.text_age_value);
         this.vehicle = view.findViewById(R.id.text_vehicle_value);

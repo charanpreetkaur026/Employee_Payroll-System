@@ -12,8 +12,8 @@
     <string name="menu_employees">Employees</string>
     <string name="menu_add_employee">Add Employee</string>
     <string name="menu_vehicle">Add Vehicle</string>
-    <string name="menu_aboutus">About Us</string>
-    <string name="menu_contactus">Contact Us</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_logout">Log out</string>
 
     <string name="login_email">admin@payroll.com</string>
     <string name="login_password">admin123</string>
