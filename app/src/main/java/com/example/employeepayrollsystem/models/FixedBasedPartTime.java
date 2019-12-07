@@ -12,4 +12,9 @@ public class FixedBasedPartTime extends PartTime {
     public float getFixedAmount() { return fixedAmount; }
 
     public void setFixedAmount(float fixedAmount) { this.fixedAmount = fixedAmount; }
+    public double calFixedAmountEarning()
+    {
+        double earn = this.getHours() * this.getRate();
+        return this.getFixedAmount() + earn;
+    }
 }
