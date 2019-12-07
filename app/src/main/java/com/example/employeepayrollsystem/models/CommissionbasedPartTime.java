@@ -12,4 +12,10 @@ public class CommissionbasedPartTime extends  PartTime {
         super(id, name, age, earnings, birthYear,vehicle, rate, hours);
         this.commission = commission;
     }
+    public  double calcCommissionEarnings(){
+        double commissionEarning;
+        double earn = (this.getHours()*this.getRate());
+        commissionEarning = (this.getCommission()/100*earn)+earn;
+        return  commissionEarning;
+    }
 }
