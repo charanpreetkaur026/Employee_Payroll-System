@@ -17,6 +17,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+            <TextView
+                android:id="@+id/emp_Id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="employee id" />
 
             <TextView
                 android:id="@+id/emp_name"
@@ -24,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="TextView" />
+                android:text="employee name" />
 
             <TextView
                 android:id="@+id/emp_age"
@@ -32,15 +39,9 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="TextView" />
+                android:text="employee age" />
 
-            <TextView
-                android:id="@+id/emp_gender"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="TextView" />
+
 
 
         </LinearLayout>

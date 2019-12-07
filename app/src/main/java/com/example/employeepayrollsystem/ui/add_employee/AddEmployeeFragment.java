@@ -72,9 +72,7 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
         {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-
                 FragmentTransaction fragmentTransaction;
-
                 switch (checkedId)
                 {
                     case R.id.radio_parttime :
@@ -83,6 +81,7 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
                         { Log.e("TAG", "PartTime Radio selected");
                             AddEmployeeFragment.this.partTimeFragment = new PartTimeFragment();
                             AddEmployeeFragment.this.partTimeFragment.getViewsFromAddEmployeeFragment(text_name,text_age,text_date_of_birth,vehicle);
+                            Toast.makeText(AddEmployeeFragment.this.getContext(), "partTime", Toast.LENGTH_SHORT).show();
                         }
 
                         fragmentTransaction = AddEmployeeFragment.this.fragmentManager.beginTransaction();

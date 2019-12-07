@@ -1,6 +1,5 @@
 package com.example.employeepayrollsystem.ui.employee_details;
 
-import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -94,7 +93,7 @@ public class EmployeeDetailsFragment extends Fragment implements DataFromEmploye
                 this.employment_type.setText("COMMISSION BASED");
                 commission_fixedamount_label.setText("COMMISSION");
                 commission_fixedamount_value.setText(((CommissionbasedPartTime) employee).getCommission()+"%");
-               // this.total_earning.setText("$ "+((CommissionbasedPartTime)employee).commissionCalcEarnings());
+                this.total_earning.setText("$ "+((CommissionbasedPartTime)employee).calcCommissionEarnings());
 
             }
             else
@@ -102,12 +101,10 @@ public class EmployeeDetailsFragment extends Fragment implements DataFromEmploye
                 this.employment_type.setText("Fixed BASED");
                 commission_fixedamount_label.setText("FIXED AMOUNT");
                 commission_fixedamount_value.setText("$ "+((FixedBasedPartTime) employee).getFixedAmount());
-               // this.total_earning.setText("$ "+((FixedBasedPartTime)employee).fixedAmountCalcEarnings());
+                this.total_earning.setText("$ "+((FixedBasedPartTime)employee).calFixedAmountEarning());
             }
 
-
-
-        }//
+        }
 
     }
 
@@ -142,7 +139,7 @@ public class EmployeeDetailsFragment extends Fragment implements DataFromEmploye
 
 
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
+
         void onFragmentInteraction(Uri uri);
     }
 }

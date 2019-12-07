@@ -54,15 +54,19 @@ public class AdapterforRecyclerView extends RecyclerView.Adapter<AdapterforRecyc
 
         TextView name;
         TextView age;
+        TextView id;
         public ViewHolder(@NonNull View View) {
             super(View);
+            id = itemView.findViewById(R.id.emp_Id);
             name = itemView.findViewById(R.id.emp_name);
             age = itemView.findViewById(R.id.emp_age);
+
         }
 
         public  void bind(final Employee e , final SetCustomClickListener listener)
         {
             Log.e("TAG", "adapter showing name");
+            id.setText("Employee ID: " + e.getId());
             name.setText("Name : "+e.getName());
             age.setText("Age : "+e.getAge());
             itemView.setOnClickListener(new View.OnClickListener() {

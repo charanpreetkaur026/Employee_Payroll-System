@@ -57,5 +57,8 @@ public abstract class Employee {
     public int getBirthYear() { return birthYear; }
 
     public void setBirthYear(int birthYear) { this.birthYear = birthYear; }
+    public  double calcEarning(){
+        return  1000;
+    }
 
 }
