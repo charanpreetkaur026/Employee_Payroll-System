@@ -19,6 +19,7 @@ import com.example.employeepayrollsystem.Interface.DataFromAddEmployeeFragment;
 import com.example.employeepayrollsystem.R;
 
 public class PartTimeFragment extends Fragment implements DataFromAddEmployeeFragment {
+    TextView id;
     TextView name;
     TextView age;
     TextView dateOfBirth;
@@ -50,7 +51,7 @@ public class PartTimeFragment extends Fragment implements DataFromAddEmployeeFra
                         if(PartTimeFragment.this.commissionBasedFragment == null)
                         {
                             PartTimeFragment.this.commissionBasedFragment = new CommissionBasedFragment();
-                            PartTimeFragment.this.commissionBasedFragment.get(name,age,gender,ratePerHour, numberOfHours, dateOfBirth, vehicle);
+                            PartTimeFragment.this.commissionBasedFragment.getViewsFromPartTimeFragment(id, name,age, ratePerHour, numberOfHours, dateOfBirth, vehicle);
                         }
                         PartTimeFragment.this.fragmentManager.beginTransaction();
                         fragmentTransaction = PartTimeFragment.this.fragmentManager.beginTransaction();
