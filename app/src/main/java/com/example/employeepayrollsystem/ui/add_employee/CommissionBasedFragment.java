@@ -30,8 +30,9 @@ public class CommissionBasedFragment extends Fragment implements DataFromPartTim
         return inflater.inflate(R.layout.fragment_commission_based, container, false);
     }
 
+
     @Override
-    public void getViewsFromPartTimeFragment(TextView id, TextView name, TextView age, TextView ratePerHour, TextView numberOfHours, Text dateOfBirth, RadioGroup vehicle) {
+    public void getViewsFromPartTimeFragment(TextView id, TextView name, TextView age, TextView ratePerHour, TextView numberOfHours, TextView dateOfBirth, RadioGroup vehicle) {
 
     }
 }

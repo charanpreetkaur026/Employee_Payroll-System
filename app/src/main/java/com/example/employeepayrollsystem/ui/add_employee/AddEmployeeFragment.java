@@ -24,10 +24,10 @@ import java.util.Calendar;
 public class AddEmployeeFragment extends Fragment implements View.OnClickListener{
     final Calendar calendar = Calendar.getInstance();
     DatePickerDialog datePickerDialog;
+    TextView id;
     TextView text_age;
     TextView text_name;
     TextView text_date_of_birth;
-    RadioGroup gender;
     RadioGroup vehicle;
     RadioGroup employementtype;
     PartTimeFragment partTimeFragment;
@@ -50,6 +50,7 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
     {
         super.onViewCreated(view, savedInstanceState);
+        this.id = view.findViewById(R.id.text_id);
         this.vehicle = view.findViewById(R.id.radio_group_vehicle);
         this.text_age = view.findViewById(R.id.text_age);
         this.text_name = view.findViewById(R.id.text_name);
@@ -70,7 +71,7 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
                         if(AddEmployeeFragment.this.partTimeFragment  == null)
                         { Log.e("TAG", "PartTime Radio selected");
                             AddEmployeeFragment.this.partTimeFragment = new PartTimeFragment();
-                            AddEmployeeFragment.this.partTimeFragment.getViewsFromAddEmployeeFragment(text_name,text_age,text_date_of_birth,vehicle);
+                            AddEmployeeFragment.this.partTimeFragment.getViewsFromAddEmployeeFragment(id, text_name,text_age,text_date_of_birth,vehicle);
                             Toast.makeText(AddEmployeeFragment.this.getContext(), "partTime", Toast.LENGTH_SHORT).show();
                         }
 

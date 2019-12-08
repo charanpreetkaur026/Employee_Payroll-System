@@ -55,7 +55,7 @@ public class InternFragment extends Fragment  implements DataFromAddEmployeeFrag
 
 
                     if(!schoolName.getText().toString().isEmpty() && !name.getText().toString().isEmpty()
-                            &&  !age.getText().toString().isEmpty() && )
+                            &&  !age.getText().toString().isEmpty())
                     {
 
 
@@ -102,12 +102,13 @@ public class InternFragment extends Fragment  implements DataFromAddEmployeeFrag
         super.onCreate(savedInstanceState);
 
     }
+
+
     @Override
-    public void getViewsFromAddEmployeeFragment(TextView name, TextView age, TextView date, RadioGroup vehicle) {
+    public void getViewsFromAddEmployeeFragment(TextView id, TextView name, TextView age, TextView date, RadioGroup vehicle) {
         this.name = name;
         this.age = age;
         this.dateOfBirth = date;
         this.vehicle = vehicle;
-
     }
 }

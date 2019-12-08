@@ -52,7 +52,7 @@ public class PartTimeFragment extends Fragment implements DataFromAddEmployeeFra
                         if(PartTimeFragment.this.commissionBasedFragment == null)
                         {
                             PartTimeFragment.this.commissionBasedFragment = new CommissionBasedFragment();
-                            PartTimeFragment.this.commissionBasedFragment.getViewsFromPartTimeFragment(id, name,age, ratePerHour, numberOfHours, dateOfBirth, vehicle);
+                            PartTimeFragment.this.commissionBasedFragment.getViewsFromPartTimeFragment(id,name,age, ratePerHour,numberOfHours, dateOfBirth, vehicle);
                         }
                         PartTimeFragment.this.fragmentManager.beginTransaction();
                         fragmentTransaction = PartTimeFragment.this.fragmentManager.beginTransaction();
@@ -82,8 +82,10 @@ public class PartTimeFragment extends Fragment implements DataFromAddEmployeeFra
         return inflater.inflate(R.layout.fragment_part_time, container, false);
     }
 
+
     @Override
-    public void getViewsFromAddEmployeeFragment(TextView name, TextView age, TextView date, RadioGroup vehicle) {
+    public void getViewsFromAddEmployeeFragment(TextView id, TextView name, TextView age, TextView date, RadioGroup vehicle) {
+        this.id = id;
         this.name = name;
         this.age = age;
         this.dateOfBirth = date;

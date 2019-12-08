@@ -4,6 +4,6 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public interface DataFromAddEmployeeFragment {
-    void getViewsFromAddEmployeeFragment(TextView name, TextView age,
+    void getViewsFromAddEmployeeFragment(TextView id, TextView name, TextView age,
                                           TextView date, RadioGroup vehicle);
 }

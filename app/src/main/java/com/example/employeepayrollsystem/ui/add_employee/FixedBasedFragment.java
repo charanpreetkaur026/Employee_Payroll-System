@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -19,6 +20,16 @@ import org.w3c.dom.Text;
 
 public class FixedBasedFragment extends Fragment implements DataFromPartTimeFragment {
 
+    TextView name;
+    TextView age;
+    RadioGroup gender;
+    TextView ratePerHour;
+    TextView numberOfHours;
+    TextView dateOfBirth;
+    RadioGroup vehicle;
+
+    TextView fixedamount;
+    Button addFixedBasedEmployee;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -32,12 +43,7 @@ public class FixedBasedFragment extends Fragment implements DataFromPartTimeFrag
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_fixed_based, container, false);
     }
-
-
-    @Override
-    public void getViewsFromPartTimeFragment(TextView id, TextView name, TextView age, TextView ratePerHour, TextView numberOfHours, Text dateOfBirth, RadioGroup vehicle) {
-
-    }
+    
 
     @Override
     public void getViewsFromPartTimeFragment(TextView id, TextView name, TextView age, TextView ratePerHour, TextView numberOfHours, TextView dateOfBirth, RadioGroup vehicle) {

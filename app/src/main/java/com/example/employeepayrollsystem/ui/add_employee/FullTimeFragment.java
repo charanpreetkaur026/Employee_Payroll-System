@@ -129,7 +129,7 @@ public class FullTimeFragment extends Fragment implements DataFromAddEmployeeFra
     }
 
     @Override
-    public void getViewsFromAddEmployeeFragment(TextView name, TextView age, TextView date, RadioGroup vehicle) {
+    public void getViewsFromAddEmployeeFragment(TextView id, TextView name, TextView age, TextView date, RadioGroup vehicle) {
 
     }
 
