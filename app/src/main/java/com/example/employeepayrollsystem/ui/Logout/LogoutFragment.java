@@ -1,4 +1,4 @@
-package com.example.employeepayrollsystem.ui.ContactUs;
+package com.example.employeepayrollsystem.ui.Logout;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -12,16 +12,15 @@ import androidx.fragment.app.Fragment;
 
 import com.example.employeepayrollsystem.R;
 
-public class ContactUsFragment extends Fragment {
+public class LogoutFragment extends Fragment {
 
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.fragment_contactus, container, false);
-        final TextView textView = root.findViewById(R.id.text_send);
-        Log.e("TAG", "ContactUsFragment");
-        return root;
+     getActivity().finish();
+        Log.e("TAG", "LogoutFragment");
+        return null;
     }
 }

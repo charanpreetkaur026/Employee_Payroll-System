@@ -12,15 +12,15 @@ import androidx.fragment.app.Fragment;
 
 import com.example.employeepayrollsystem.R;
 
-public class AboutUsFragment extends Fragment {
+public class HelpFragment extends Fragment {
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.fragment_about_us, container, false);
+        View root = inflater.inflate(R.layout.fragment_help, container, false);
         final TextView textView = root.findViewById(R.id.text_about_us);
-        Log.e("TAG", "AboutUsFragment");
+        Log.e("TAG", "HelpFragment");
 
 
         return root;

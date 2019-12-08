@@ -26,7 +26,7 @@
                 android:icon="@drawable/ic_menu_about_24dp"
                 android:title="@string/menu_help" />
             <item
-                android:id="@+id/nav_login"
+                android:id="@+id/nav_logout"
                 android:icon="@drawable/ic_contact_black_24dp"
                 android:title="@string/menu_logout" />
 

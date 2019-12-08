@@ -1,7 +1,10 @@
 package com.example.employeepayrollsystem;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -24,28 +27,20 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-//        FloatingActionButton fab = findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-////                Intent intent = new Intent(HomeActivity.this, ContactUsFragment.class);
-////                startActivity(intent);
-//                Snackbar.make(view, "Email us at: admin@payroll.com", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_employees, R.id.nav_addEmpoyee,
-                R.id.nav_add_vehicle, R.id.nav_help, R.id.nav_login)
+                R.id.nav_add_vehicle, R.id.nav_help, R.id.nav_logout)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+
     }
 
 //    @Override
@@ -56,37 +51,26 @@ public class HomeActivity extends AppCompatActivity {
 //    }
 
     @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if(id==R.id.nav_logout){
+            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+            //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
-//    public void setUpNavigateDrawer()
-//    {
-//        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener()
-//        {
-//            @Override
-//            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
-//            {
-//                FragmentManager mFragmentManager = getSupportFragmentManager();
-//                FragmentTransaction mFragmentTransaction = mFragmentManager.beginTransaction();
-//
-//                switch (menuItem.getItemId())
-//                {
-//                    case R.id.nav_home:
-//                        mFragmentTransaction.replace(R.id.container, new HomeFragment());
-//                        break;
-//
-//                    case R.id.nav_gallery:
-//                        mFragmentTransaction.replace(R.id.container, new GalleryFragment());
-//                        break;
-//
-//                }
-//
-//                mFragmentTransaction.commit();
-//                drawer.closeDrawers();
-//                return true;
-//            }
-//        });
+//    public void  logout(){
+//        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+//        //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//        startActivity(intent);
 //    }
+
 }
