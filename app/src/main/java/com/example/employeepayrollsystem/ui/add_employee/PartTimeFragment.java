@@ -1,6 +1,5 @@
 package com.example.employeepayrollsystem.ui.add_employee;
 
-import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -8,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,13 +21,13 @@ import com.example.employeepayrollsystem.R;
 public class PartTimeFragment extends Fragment implements DataFromAddEmployeeFragment {
     TextView name;
     TextView age;
-    RadioGroup gender;
     TextView dateOfBirth;
     RadioGroup vehicle;
     TextView ratePerHour;
     TextView numberOfHours;
-    RadioGroup parttimeType;
+    RadioGroup radioPartTime;
     FragmentManager fragmentManager;
+    CommissionBased
 
 
 
@@ -39,7 +39,38 @@ public class PartTimeFragment extends Fragment implements DataFromAddEmployeeFra
         this.ratePerHour = view.findViewById(R.id.text_rateper_hour);
         this.numberOfHours = view.findViewById(R.id.text_number_of_hours);
         this.fragmentManager = getActivity().getSupportFragmentManager();
-        this.parttimeType = getActivity().findViewById(R.id.radio_group_parttime_type);
+        this.radioPartTime = getActivity().findViewById(R.id.radio_group_parttime_type);
+        this.radioPartTime.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                FragmentTransaction fragmentTransaction;
+                switch (checkedId)
+                {
+                    case R.id.radio_commission_parttime :
+                        if(PartTimeFragment.this.C == null)
+                        {
+                            PartTimeFragment.this.commissionBasedFragment = new CommissionBasedFragment();
+                            PartTimeFragment.this.commissionBasedFragment.viewsFromPartTimeFragment(name,age,gender,ratePerHour, numberOfHours, dateOfBirth, vehicle);
+                        }
+                        PartTimeFragment.this.fragmentManager.beginTransaction();
+                        fragmentTransaction = PartTimeFragment.this.fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layout_parttime_type, PartTimeFragment.this.commissionBasedFragment);
+                        fragmentTransaction.commit();
+                        break;
+
+                    case R.id.radio_fix_parttime :
+                        if(PartTimeFragment.this.fixBasedFragment == null)
+                        {
+                            PartTimeFragment.this.fixBasedFragment = new FixBasedFragment();
+                            PartTimeFragment.this.fixBasedFragment.viewsFromPartTimeFragment(name,age,gender,ratePerHour, numberOfHours, dateOfBirth, vehicle);
+                        }
+                        PartTimeFragment.this.fragmentManager.beginTransaction();
+                        fragmentTransaction = PartTimeFragment.this.fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layout_parttime_type, PartTimeFragment.this.fixBasedFragment);
+                        fragmentTransaction.commit();
+                }
+            }
+        });
     }
 
     @Override
