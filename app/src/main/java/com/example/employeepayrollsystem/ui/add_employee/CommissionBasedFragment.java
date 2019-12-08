@@ -9,10 +9,15 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
+import com.example.employeepayrollsystem.Interface.DataFromPartTimeFragment;
 import com.example.employeepayrollsystem.R;
 
-public class CommissionBasedFragment extends Fragment {
+import org.w3c.dom.Text;
+
+public class CommissionBasedFragment extends Fragment implements DataFromPartTimeFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,5 +28,10 @@ public class CommissionBasedFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_commission_based, container, false);
+    }
+
+    @Override
+    public void getViewsFromPartTimeFragment(TextView id, TextView name, TextView age, TextView ratePerHour, TextView numberOfHours, Text dateOfBirth, RadioGroup vehicle) {
+
     }
 }

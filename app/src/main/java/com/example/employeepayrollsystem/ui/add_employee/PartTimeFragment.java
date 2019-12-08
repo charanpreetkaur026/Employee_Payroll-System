@@ -27,7 +27,7 @@ public class PartTimeFragment extends Fragment implements DataFromAddEmployeeFra
     TextView numberOfHours;
     RadioGroup radioPartTime;
     FragmentManager fragmentManager;
-    CommissionBased
+    CommissionBasedFragment commissionBasedFragment;
 
 
 
@@ -47,10 +47,10 @@ public class PartTimeFragment extends Fragment implements DataFromAddEmployeeFra
                 switch (checkedId)
                 {
                     case R.id.radio_commission_parttime :
-                        if(PartTimeFragment.this.C == null)
+                        if(PartTimeFragment.this.commissionBasedFragment == null)
                         {
                             PartTimeFragment.this.commissionBasedFragment = new CommissionBasedFragment();
-                            PartTimeFragment.this.commissionBasedFragment.viewsFromPartTimeFragment(name,age,gender,ratePerHour, numberOfHours, dateOfBirth, vehicle);
+                            PartTimeFragment.this.commissionBasedFragment.get(name,age,gender,ratePerHour, numberOfHours, dateOfBirth, vehicle);
                         }
                         PartTimeFragment.this.fragmentManager.beginTransaction();
                         fragmentTransaction = PartTimeFragment.this.fragmentManager.beginTransaction();
