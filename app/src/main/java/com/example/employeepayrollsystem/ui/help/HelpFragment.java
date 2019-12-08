@@ -31,9 +31,10 @@ public class HelpFragment extends Fragment {
     private void showAlert(){
         androidx.appcompat.app.AlertDialog.Builder alertDailogBuilder = new androidx.appcompat.app.AlertDialog.Builder(getActivity());
         // alertDailogBuilder.setIcon(R.drawable.);
-        alertDailogBuilder.setTitle("Back");
-        alertDailogBuilder.setMessage("Are you sure to go back?");
-        alertDailogBuilder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+        alertDailogBuilder.setTitle("Contact Us ");
+        alertDailogBuilder.setMessage("Drop an Email at: admin@payroll.com");
+        alertDailogBuilder.setMessage("Comapny Direct: (+1)234-567-89999");
+        alertDailogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //finish();
