@@ -1,10 +1,12 @@
 package com.example.employeepayrollsystem;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -53,6 +55,9 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
+        if(id==R.id.nav_help){
+            showAlert();
+        }
         if(id==R.id.nav_logout){
             Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
             //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -72,5 +77,27 @@ public class HomeActivity extends AppCompatActivity {
 //        //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 //        startActivity(intent);
 //    }
+public void showAlert(){
+    androidx.appcompat.app.AlertDialog.Builder alertDailogBuilder = new androidx.appcompat.app.AlertDialog.Builder(this);
+    // alertDailogBuilder.setIcon(R.drawable.);
+    alertDailogBuilder.setTitle("Contact Us ");
+    alertDailogBuilder.setMessage("Drop an Email at: admin@payroll.com");
+    alertDailogBuilder.setMessage("Drop an Email at: admin@payroll.com\n" +
+            "Comapny Direct: (+1)234-567-89999");
+    alertDailogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            //finish();
+        }
+    });
+    alertDailogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+
+        }
+    });
+    AlertDialog mAlertDialog = alertDailogBuilder.create();
+    mAlertDialog.show();
+}
 
 }

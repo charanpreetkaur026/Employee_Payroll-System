@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/secondaryShrinePink"
     android:orientation="vertical"
-    tools:context=".ui.Employees.PartTimeFragment">
+    tools:context=".ui.add_employee.PartTimeFragment">
 <com.google.android.material.textfield.TextInputLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
