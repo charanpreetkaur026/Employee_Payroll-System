@@ -7,33 +7,64 @@
     android:background="@color/secondaryShrinePink">
 
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:layout_margin="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/payroll"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="202dp"
-        android:contentDescription="TODO" />
-
     <TextView
-        android:id="@+id/text_home"
+        android:id="@+id/textView6"
         android:layout_width="0dp"
         android:layout_height="112dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="162dp"
         android:layout_marginEnd="8dp"
         android:background="@color/secondaryShrinePink"
-        android:text="@string/homefragment_message"
+        android:text="Date"
         android:textAlignment="center"
         android:textColor="@color/barbrown"
-        android:textSize="20sp"
+        android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        tools:layout_editor_absoluteY="48dp" />
+
+    <TextView
+        android:id="@+id/text_date"
+        android:layout_width="0dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/secondaryShrinePink"
+        android:text="Date"
+        android:textAlignment="center"
+        android:textColor="@color/barbrown"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="0dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/secondaryShrinePink"
+        android:text="Current Time"
+        android:textAlignment="center"
+        android:textColor="@color/barbrown"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_date" />
+
+    <TextView
+        android:id="@+id/txt_Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="time"
+        android:textColor="@color/barbrown"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 </androidx.constraintlayout.widget.ConstraintLayout>

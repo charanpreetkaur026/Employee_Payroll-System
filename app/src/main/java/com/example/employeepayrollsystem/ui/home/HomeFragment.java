@@ -7,24 +7,38 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.example.employeepayrollsystem.R;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 public class HomeFragment extends Fragment {
 
 
-private  TextView txtHome;
+private  TextView txtDate;
+private  TextView txtTime;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-       txtHome = root.findViewById(R.id.text_home);
-        txtHome.setText(R.string.homefragment_message);
+        //https://stackoverflow.com/questions/5369682/how-to-get-current-time-and-date-in-android
+       txtDate = root.findViewById(R.id.text_date);
+       Date currentDate = new Date();
+        DateFormat formatter = DateFormat.getDateInstance();
+        String date = formatter.format(currentDate);
+        txtDate.setText(date);
+
+        txtTime = root.findViewById(R.id.txt_Time);
+        Date currentTime = Calendar.getInstance().getTime();
+        String time = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
+        txtTime.setText(time);
+
         Log.e("TAG", "HomeFragment");
         return root;
     }
