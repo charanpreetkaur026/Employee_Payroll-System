@@ -9,10 +9,15 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
+import com.example.employeepayrollsystem.Interface.DataFromPartTimeFragment;
 import com.example.employeepayrollsystem.R;
 
-public class FixedBasedFragment extends Fragment {
+import org.w3c.dom.Text;
+
+public class FixedBasedFragment extends Fragment implements DataFromPartTimeFragment {
 
 
     @Override
@@ -29,4 +34,13 @@ public class FixedBasedFragment extends Fragment {
     }
 
 
+    @Override
+    public void getViewsFromPartTimeFragment(TextView id, TextView name, TextView age, TextView ratePerHour, TextView numberOfHours, Text dateOfBirth, RadioGroup vehicle) {
+
+    }
+
+    @Override
+    public void getViewsFromPartTimeFragment(TextView id, TextView name, TextView age, TextView ratePerHour, TextView numberOfHours, TextView dateOfBirth, RadioGroup vehicle) {
+
+    }
 }

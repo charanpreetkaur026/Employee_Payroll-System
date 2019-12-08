@@ -29,6 +29,7 @@ public class PartTimeFragment extends Fragment implements DataFromAddEmployeeFra
     RadioGroup radioPartTime;
     FragmentManager fragmentManager;
     CommissionBasedFragment commissionBasedFragment;
+    FixedBasedFragment fixedBasedFragment;
 
 
 
@@ -60,14 +61,14 @@ public class PartTimeFragment extends Fragment implements DataFromAddEmployeeFra
                         break;
 
                     case R.id.radio_fix_parttime :
-                        if(PartTimeFragment.this.fixBasedFragment == null)
+                        if(PartTimeFragment.this.fixedBasedFragment == null)
                         {
-                            PartTimeFragment.this.fixBasedFragment = new FixBasedFragment();
-                            PartTimeFragment.this.fixBasedFragment.viewsFromPartTimeFragment(name,age,gender,ratePerHour, numberOfHours, dateOfBirth, vehicle);
+                            PartTimeFragment.this.fixedBasedFragment = new FixedBasedFragment();
+                            PartTimeFragment.this.fixedBasedFragment.getViewsFromPartTimeFragment(id, name,age,ratePerHour, numberOfHours, dateOfBirth, vehicle);
                         }
                         PartTimeFragment.this.fragmentManager.beginTransaction();
                         fragmentTransaction = PartTimeFragment.this.fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.frame_layout_parttime_type, PartTimeFragment.this.fixBasedFragment);
+                        fragmentTransaction.replace(R.id.frame_layout_parttime_type, PartTimeFragment.this.fixedBasedFragment);
                         fragmentTransaction.commit();
                 }
             }

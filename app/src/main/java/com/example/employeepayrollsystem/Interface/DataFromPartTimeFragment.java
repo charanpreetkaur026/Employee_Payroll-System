@@ -7,6 +7,6 @@ import org.w3c.dom.Text;
 
 public interface DataFromPartTimeFragment {
     void getViewsFromPartTimeFragment(TextView id, TextView name, TextView age, TextView ratePerHour,
-                                      TextView numberOfHours, Text dateOfBirth, RadioGroup vehicle);
+                                      TextView numberOfHours, TextView dateOfBirth, RadioGroup vehicle);
 
 }
