@@ -26,13 +26,13 @@ import com.example.employeepayrollsystem.models.Vehicle;
 
 
 public class FullTimeFragment extends Fragment implements DataFromAddEmployeeFragment {
-
-    TextView name;
-    TextView age;
-    TextView dateOfBirth;
-    RadioGroup vehicle;
-    TextView salary;
-    TextView bonus;
+    TextView txtId;
+    TextView txtName;
+    TextView txtAge;
+    TextView txtDateOfBirth;
+    RadioGroup radioVehicle;
+    TextView txtSalary;
+    TextView txtBonus;
     Button btnAddFullTime;
     private OnFragmentInteractionListener mListener;
 
@@ -55,9 +55,8 @@ public class FullTimeFragment extends Fragment implements DataFromAddEmployeeFra
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        this.salary = view.findViewById(R.id.text_salary);
-
-        this.bonus = view.findViewById(R.id.text_bonus);
+        this.txtSalary = view.findViewById(R.id.text_salary);
+        this.txtBonus = view.findViewById(R.id.text_bonus);
 
 
         this.btnAddFullTime = view.findViewById(R.id.btn_fulltime_employee);
@@ -66,16 +65,19 @@ public class FullTimeFragment extends Fragment implements DataFromAddEmployeeFra
             public void onClick(View v) {
 
 
-                if( !bonus.getText().toString().isEmpty()   && !salary.getText().toString().isEmpty() && !name.getText().toString().isEmpty() &&  !age.getText().toString().isEmpty() && !(gender.getCheckedRadioButtonId() == -1)) {
-
-
-                    String name_string = name.getText().toString();
-                    int age_int = Integer.parseInt(age.getText().toString().substring(6));
-                    int salary_int = Integer.parseInt(salary.getText().toString());
-                    int bonus_int = Integer.parseInt(bonus.getText().toString());
+                if( !txtBonus.getText().toString().isEmpty()
+                        && !txtSalary.getText().toString().isEmpty()
+                        && !txtId.getText().toString().isEmpty()
+                        && !txtName.getText().toString().isEmpty()
+                        &&  !txtAge.getText().toString().isEmpty()) {
+                    int id_int = Integer.parseInt(txtId.getText().toString());
+                    String name_string = txtName.getText().toString();
+                    int age_int = Integer.parseInt(txtAge.getText().toString().substring(6));
+                    int salary_int = Integer.parseInt(txtSalary.getText().toString());
+                    int bonus_int = Integer.parseInt(txtBonus.getText().toString());
 
                     Vehicle vehicle_Vehicle = null;
-                    switch (vehicle.getCheckedRadioButtonId()) {
+                    switch (radioVehicle.getCheckedRadioButtonId()) {
                         case R.id.radio_car:
                             vehicle_Vehicle = new Car("", "", "");
                             break;
@@ -84,14 +86,15 @@ public class FullTimeFragment extends Fragment implements DataFromAddEmployeeFra
                             break;
 
                     }
-                    Singleton.getSingletonObjObj().addtoList(new FullTime());
+                    Singleton.getSingletonObjObj().addtoList(new
+                            FullTime(salary_int, bonus_int,id_int,name_string,age_int, vehicle_Vehicle ));
                     Toast.makeText(getActivity(), "Employee Added", Toast.LENGTH_LONG).show();
-                    salary.setText(null);
-                    bonus.setText(null);
-                    name.setText(null);
-                    age.setText(null);
-                    dateOfBirth.setText("DateOfBirth : YYYY/MM/DD");
-                    vehicle.clearCheck();
+                    txtSalary.setText(null);
+                    txtBonus.setText(null);
+                    txtName.setText(null);
+                    txtAge.setText(null);
+                    txtDateOfBirth.setText("DateOfBirth : YYYY/MM/DD");
+                    radioVehicle.clearCheck();
                 }
                 else
                 {
@@ -100,7 +103,7 @@ public class FullTimeFragment extends Fragment implements DataFromAddEmployeeFra
             }
         });
     }
-    }
+
 
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
