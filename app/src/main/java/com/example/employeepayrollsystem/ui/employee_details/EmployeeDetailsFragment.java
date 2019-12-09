@@ -85,15 +85,10 @@ public class EmployeeDetailsFragment extends Fragment implements DataFromEmploye
         this.name.setText(employee.getName().toUpperCase());
         this.age.setText(employee.getAge()+"");
         this.txtVehicle.setText(employee.getVehicle() == null ? "null" : employee.getVehicle() instanceof Car ? "CAR" : "MOTER CYCLE");
-        if(vehicle instanceof  Car){
+
             this.txtMake.setText(employee.getVehicle().getMake());
+            this.txtPlate.setText(employee.getVehicle().getPlate());
 
-
-
-
-
-
-        }
         if(employee instanceof PartTime)
         {
 
