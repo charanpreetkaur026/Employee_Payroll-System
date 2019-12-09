@@ -14,7 +14,7 @@ public class Singleton {
              16, 20, 150, new Car("Audi", "PB08", "A4"));
      FixedBasedPartTime emp_fp = new FixedBasedPartTime(2, "deep", 21, 1200.30, 1996,
              14, 40, 130, new Motorcycle("Royal Enfield", "PBO9", "Bullet"));
-     Intern emp_intern = new Intern("Lambton college in Toronto", 3, "inder", 21,
+     Intern emp_intern = new Intern("Lambton college in Toronto", 1200.00, 3, "inder", 21,
              new Motorcycle("abc", "ABC123", "A1B2"));
      FullTime emp_full1 = new FullTime(2500, 300, 5, "Camy", 25,
              new Car("Nissan", "CAMYG", "xyz"));

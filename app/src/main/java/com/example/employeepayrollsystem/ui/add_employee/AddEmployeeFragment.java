@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,6 +34,7 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
     PartTimeFragment partTimeFragment;
     FullTimeFragment fullTimeFragment;
     InternFragment internFragment;
+    CheckBox checkVehicle;
 
 
     FragmentManager fragmentManager;
@@ -56,9 +58,29 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
         this.text_name = view.findViewById(R.id.text_name);
         this.text_date_of_birth = view.findViewById(R.id.text_date_of_birth);
         this.employementtype = view.findViewById(R.id.radio_group_employment);
+        this.checkVehicle = view.findViewById(R.id.check_vehicle);
 
         //date picker
         this.text_date_of_birth.setOnClickListener(this);
+        //checking vehicle
+        checkVehicle.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
         this.employementtype.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
         {
             @Override

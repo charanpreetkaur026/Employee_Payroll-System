@@ -136,7 +136,7 @@ public class EmployeeDetailsFragment extends Fragment implements DataFromEmploye
 
             salary.setText("$ "+((FullTime) employee).getSalary());
             bonus.setText("$ "+((FullTime) employee).getBonus());
-            //this.total_earning.setText("$ "+((FullTime)employee).calcEarning());
+            this.total_earning.setText("$ "+ employee.calcEarning());
         }else{
             parttime_card.setVisibility(View.GONE);
             fulltime_card.setVisibility(View.GONE);
@@ -145,7 +145,7 @@ public class EmployeeDetailsFragment extends Fragment implements DataFromEmploye
             this.internSchool = view.findViewById(R.id.text_school_value);
             internSchool.setText(((Intern)employee).getSchoolname());
 
-
+            this.total_earning.setText("$ "+ employee.calcEarning());
         }
 
     }
