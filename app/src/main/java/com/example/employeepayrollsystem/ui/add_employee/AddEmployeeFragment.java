@@ -6,7 +6,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.DatePicker;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,28 +15,19 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.example.employeepayrollsystem.DatePickerFragment;
 import com.example.employeepayrollsystem.R;
-import com.example.employeepayrollsystem.ui.Employees.FullTimeFragment;
-import com.example.employeepayrollsystem.ui.Employees.InternFragment;
-import com.example.employeepayrollsystem.ui.Employees.PartTimeFragment;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.Period;
+
 import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
 
 public class AddEmployeeFragment extends Fragment implements View.OnClickListener{
     final Calendar calendar = Calendar.getInstance();
     DatePickerDialog datePickerDialog;
+    TextView id;
     TextView text_age;
     TextView text_name;
     TextView text_date_of_birth;
-    RadioGroup gender;
     RadioGroup vehicle;
     RadioGroup employementtype;
     PartTimeFragment partTimeFragment;
@@ -60,6 +50,7 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
     {
         super.onViewCreated(view, savedInstanceState);
+        this.id = view.findViewById(R.id.text_id);
         this.vehicle = view.findViewById(R.id.radio_group_vehicle);
         this.text_age = view.findViewById(R.id.text_age);
         this.text_name = view.findViewById(R.id.text_name);
@@ -80,7 +71,7 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
                         if(AddEmployeeFragment.this.partTimeFragment  == null)
                         { Log.e("TAG", "PartTime Radio selected");
                             AddEmployeeFragment.this.partTimeFragment = new PartTimeFragment();
-                            AddEmployeeFragment.this.partTimeFragment.getViewsFromAddEmployeeFragment(text_name,text_age,text_date_of_birth,vehicle);
+                            AddEmployeeFragment.this.partTimeFragment.getViewsFromAddEmployeeFragment(id, text_name,text_age,text_date_of_birth,vehicle);
                             Toast.makeText(AddEmployeeFragment.this.getContext(), "partTime", Toast.LENGTH_SHORT).show();
                         }
 

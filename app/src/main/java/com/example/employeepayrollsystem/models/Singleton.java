@@ -8,6 +8,7 @@ public class Singleton {
     List<Employee> employees;
     private Singleton(){
         employees = new ArrayList<>();
+
         //create objects of employee classes here
      CommissionbasedPartTime emp_cp = new CommissionbasedPartTime(1, "preet", 20, 1000.50, 1995,
              16, 20, 150, new Car("Audi", "PB08", "A4"));

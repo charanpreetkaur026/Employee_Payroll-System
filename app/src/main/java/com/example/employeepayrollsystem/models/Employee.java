@@ -10,7 +10,7 @@ public abstract class Employee {
 
 
 
-    public Employee(String name, int age, Vehicle vehicle)
+    public Employee(int id, String name, int age, Vehicle vehicle)
     {
         this.id = id;
         this.name = name;

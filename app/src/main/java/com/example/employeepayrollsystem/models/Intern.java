@@ -10,8 +10,8 @@ public class Intern extends Employee
 
 
 
-    public Intern(String schoolname, String name, int age , Vehicle vehicle ) {
-        super(name,age,vehicle);
+    public Intern( String schoolname, int id,String name, int age , Vehicle vehicle ) {
+        super(id,name,age,vehicle);
         this.schoolname = schoolname;
     }
 

@@ -16,22 +16,20 @@
             android:id="@+id/nav_addEmpoyee"
             android:icon="@drawable/ic_person_add_black_24dp"
             android:title="@string/menu_add_employee" />
-        <item
-            android:id="@+id/nav_add_vehicle"
-            android:icon="@drawable/ic_menu_addvehicle_24dp"
-            android:title="@string/menu_vehicle" />
+
     </group>
 
     <item android:title="Communicate">
         <menu>
             <item
-                android:id="@+id/nav_about_us"
+                android:id="@+id/nav_help"
                 android:icon="@drawable/ic_menu_about_24dp"
-                android:title="@string/menu_aboutus" />
+                android:title="@string/menu_help" />
             <item
-                android:id="@+id/nav_contact"
+                android:id="@+id/nav_logout"
                 android:icon="@drawable/ic_contact_black_24dp"
-                android:title="@string/menu_contactus" />
+                android:title="@string/menu_logout" />
+
         </menu>
     </item>
 
