@@ -16,11 +16,14 @@ public class Singleton {
              14, 40, 130, new Motorcycle("Royal Enfield", "PBO9", "Bullet"));
      Intern emp_intern = new Intern("Lambton college in Toronto", 3, "inder", 21,
              new Motorcycle("abc", "ABC123", "A1B2"));
+     FullTime emp_full1 = new FullTime(2500, 300, 5, "Camy", 25,
+             new Car("Nissan", "CAMYG", "xyz"));
 
 
         addtoList(emp_cp);
         addtoList(emp_fp);
         addtoList(emp_intern);
+        addtoList(emp_full1);
     }
     //to add employee objects to list
     public void addtoList(Employee emp)

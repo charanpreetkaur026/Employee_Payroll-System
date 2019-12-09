@@ -31,6 +31,8 @@ public class FullTime extends Employee
         this.bonus = bonus;
     }
 
-    
-
+    @Override
+    public double calcEarning() {
+        return this.getSalary()+this.getBonus();
+    }
 }
