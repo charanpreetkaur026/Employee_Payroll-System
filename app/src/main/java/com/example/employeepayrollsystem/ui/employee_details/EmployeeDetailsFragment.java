@@ -31,6 +31,7 @@ public class EmployeeDetailsFragment extends Fragment implements DataFromEmploye
     TextView age;
     TextView txtVehicle;
     CardView vehicle_card;
+    TextView txtModel, txtPlate, txtMake;
 
     CardView parttime_card;
     CardView fulltime_card;
@@ -77,11 +78,19 @@ public class EmployeeDetailsFragment extends Fragment implements DataFromEmploye
         this.intern_card = view.findViewById(R.id.intern_card);
         this.employment_type = view.findViewById(R.id.text_employment_type_value);
         this.total_earning = view.findViewById(R.id.text_total_earning_val);
+        this.txtMake = view.findViewById(R.id.text_make_value);
+        this.txtModel = view.findViewById(R.id.text_model_value);
+        this.txtPlate = view.findViewById(R.id.text_plate_value);
 
         this.name.setText(employee.getName().toUpperCase());
         this.age.setText(employee.getAge()+"");
         this.txtVehicle.setText(employee.getVehicle() == null ? "null" : employee.getVehicle() instanceof Car ? "CAR" : "MOTER CYCLE");
         if(vehicle instanceof  Car){
+            this.txtMake.setText(employee.getVehicle().getMake());
+
+
+
+
 
 
         }
