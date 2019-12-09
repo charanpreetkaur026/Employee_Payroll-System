@@ -20,14 +20,19 @@ import com.example.employeepayrollsystem.models.CommissionbasedPartTime;
 import com.example.employeepayrollsystem.models.Employee;
 import com.example.employeepayrollsystem.models.FixedBasedPartTime;
 import com.example.employeepayrollsystem.models.PartTime;
+import com.example.employeepayrollsystem.models.Vehicle;
 
 
 public class EmployeeDetailsFragment extends Fragment implements DataFromEmployeeCards {
     Employee employee;
+    Vehicle vehicle;
     TextView empId;
     TextView name;
     TextView age;
-    TextView vehicle;
+    TextView txtVehicle;
+    CardView vehicle_card;
+    TextView txtModel, txtPlate, txtMake;
+
     CardView parttime_card;
     CardView fulltime_card;
     CardView intern_card;
@@ -67,16 +72,23 @@ public class EmployeeDetailsFragment extends Fragment implements DataFromEmploye
 //        this.empId = view.findViewById(R.id.text_)
         this.name = view.findViewById(R.id.text_name_value);
         this.age = view.findViewById(R.id.text_age_value);
-        this.vehicle = view.findViewById(R.id.text_vehicle_value);
+        this.txtVehicle = view.findViewById(R.id.text_vehicle_value);
         this.parttime_card = view.findViewById(R.id.parttime_card);
         this.fulltime_card = view.findViewById(R.id.fulltime_card);
         this.intern_card = view.findViewById(R.id.intern_card);
         this.employment_type = view.findViewById(R.id.text_employment_type_value);
         this.total_earning = view.findViewById(R.id.text_total_earning_val);
+        this.txtMake = view.findViewById(R.id.text_make_value);
+        this.txtModel = view.findViewById(R.id.text_model_value);
+        this.txtPlate = view.findViewById(R.id.text_plate_value);
 
         this.name.setText(employee.getName().toUpperCase());
         this.age.setText(employee.getAge()+"");
-        this.vehicle.setText(employee.getVehicle() == null ? "null" : employee.getVehicle() instanceof Car ? "CAR" : "MOTER CYCLE");
+        this.txtVehicle.setText(employee.getVehicle() == null ? "null" : employee.getVehicle() instanceof Car ? "CAR" : "MOTER CYCLE");
+
+            this.txtMake.setText(employee.getVehicle().getMake());
+            this.txtPlate.setText(employee.getVehicle().getPlate());
+
         if(employee instanceof PartTime)
         {
 
