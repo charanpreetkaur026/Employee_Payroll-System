@@ -25,7 +25,7 @@ import com.example.employeepayrollsystem.models.Singleton;
 import com.example.employeepayrollsystem.models.Vehicle;
 
 public class InternFragment extends Fragment  implements DataFromAddEmployeeFragment {
-
+TextView id;
         TextView name;
         TextView age;
         TextView dateOfBirth;
@@ -58,22 +58,22 @@ public class InternFragment extends Fragment  implements DataFromAddEmployeeFrag
                             &&  !age.getText().toString().isEmpty())
                     {
 
-
+                        int id_int = Integer.parseInt(id.getText().toString());
                         String schoolname_string = schoolName.getText().toString();
                         String name_string = name.getText().toString();
                         int age_int = Integer.parseInt(age.getText().toString().substring(6));
                         Vehicle vehicle_Vehicle = null;
                         switch (vehicle.getCheckedRadioButtonId()) {
                             case R.id.radio_car:
-                                vehicle_Vehicle = new Car();
+                                vehicle_Vehicle = new Car("", "", "");
                                 break;
                             case R.id.radio_motorCycle:
-                                vehicle_Vehicle = new Motorcycle();
+                                vehicle_Vehicle = new Motorcycle("" ,"", "");
                                 break;
 
                         }
                         Singleton.getSingletonObjObj().addtoList(new
-                                Intern());
+                                Intern(schoolname_string,id_int, name_string, age_int, vehicle_Vehicle ));
                         Toast.makeText(getActivity(), "Employee Added", Toast.LENGTH_LONG).show();
                         schoolName.setText(null);
                         name.setText(null);
@@ -106,6 +106,7 @@ public class InternFragment extends Fragment  implements DataFromAddEmployeeFrag
 
     @Override
     public void getViewsFromAddEmployeeFragment(TextView id, TextView name, TextView age, TextView date, RadioGroup vehicle) {
+        this.id = id;
         this.name = name;
         this.age = age;
         this.dateOfBirth = date;
