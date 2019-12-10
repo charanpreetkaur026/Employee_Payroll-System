@@ -20,7 +20,9 @@ public class LoginActivity extends AppCompatActivity {
         edtEmail =findViewById(R.id.edtEmail);
         edtPassword =findViewById(R.id.edtPassword);
         btnLogin = findViewById(R.id.btnLogin);
-buttonClick();
+        edtEmail.setText("user@employee.com");
+        edtPassword.setText("s3cr3t");
+        buttonClick();
     }
     public void buttonClick(){
         btnLogin.setOnClickListener(new View.OnClickListener() {

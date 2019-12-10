@@ -37,8 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:focusable="false"
-                android:hint="@string/login_email" />
+                android:focusable="false" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -55,7 +54,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:focusable="false"
-                />
+               android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
