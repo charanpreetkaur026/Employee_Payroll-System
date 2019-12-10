@@ -66,6 +66,7 @@ public class CommissionBasedFragment extends Fragment implements DataFromPartTim
                     int rate_int = Integer.parseInt(txtRatePerHour.getText().toString());
                     float hours_float = Float.parseFloat(txtNumberOfHours.getText().toString());
                     String name_string = txtName.getText().toString();
+                    String birthyear_int = txtDateOfBirth.getText().toString();
                     int age_int = Integer.parseInt(txtAge.getText().toString());
                     int id_int = Integer.parseInt(txtId.getText().toString());
 
@@ -81,7 +82,7 @@ public class CommissionBasedFragment extends Fragment implements DataFromPartTim
                     }
 
                     Singleton.getSingletonObjObj().addtoList(new CommissionbasedPartTime
-                            (id_int, name_string, age_int, commission_int, rate_int, hours_float, vehicle_Vehicle));
+                            (id_int, name_string, birthyear_int, commission_int, rate_int, hours_float, vehicle_Vehicle));
                     Toast.makeText(getActivity(), "Employee Added", Toast.LENGTH_LONG).show();
                     txtCommission.setText(null);
                     txtRatePerHour.setText(null);

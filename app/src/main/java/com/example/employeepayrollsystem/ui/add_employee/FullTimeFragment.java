@@ -1,6 +1,7 @@
 package com.example.employeepayrollsystem.ui.add_employee;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -8,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,13 +18,16 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.employeepayrollsystem.HomeActivity;
 import com.example.employeepayrollsystem.Interface.DataFromAddEmployeeFragment;
+import com.example.employeepayrollsystem.LoginActivity;
 import com.example.employeepayrollsystem.R;
 import com.example.employeepayrollsystem.models.Car;
 import com.example.employeepayrollsystem.models.FullTime;
 import com.example.employeepayrollsystem.models.Motorcycle;
 import com.example.employeepayrollsystem.models.Singleton;
 import com.example.employeepayrollsystem.models.Vehicle;
+import com.example.employeepayrollsystem.ui.Employees.EmployeesFragment;
 
 
 public class FullTimeFragment extends Fragment implements DataFromAddEmployeeFragment {
@@ -72,7 +77,7 @@ public class FullTimeFragment extends Fragment implements DataFromAddEmployeeFra
                         &&  !txtAge.getText().toString().isEmpty()) {
                     int id_int = Integer.parseInt(txtId.getText().toString());
                     String name_string = txtName.getText().toString();
-                    int birthyear_int = Integer.parseInt(txtDateOfBirth.getText().toString());
+                    String birthyear_int = txtDateOfBirth.getText().toString();
                     int age_int = Integer.parseInt(txtAge.getText().toString().substring(6));
                     int salary_int = Integer.parseInt(txtSalary.getText().toString());
                     int bonus_int = Integer.parseInt(txtBonus.getText().toString());
@@ -89,7 +94,10 @@ public class FullTimeFragment extends Fragment implements DataFromAddEmployeeFra
                     }
                     Singleton.getSingletonObjObj().addtoList(new
                             FullTime(id_int, name_string, birthyear_int,salary_int, bonus_int, vehicle_Vehicle ));
+                    Log.e("TAG", "full time added");
                     Toast.makeText(getActivity(), "Employee Added", Toast.LENGTH_LONG).show();
+                   // Intent mIntent = new Intent(FullTimeFragment.this, LoginActivity.class);
+                    //startActivity(mIntent);
                     txtSalary.setText(null);
                     txtBonus.setText(null);
                     txtName.setText(null);
@@ -112,16 +120,16 @@ public class FullTimeFragment extends Fragment implements DataFromAddEmployeeFra
         }
     }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
+//    @Override
+//    public void onAttach(Context context) {
+//        super.onAttach(context);
+//        if (context instanceof OnFragmentInteractionListener) {
+//            mListener = (OnFragmentInteractionListener) context;
+//        } else {
+//            throw new RuntimeException(context.toString()
+//                    + " must implement OnFragmentInteractionListener");
+//        }
+//    }
 
     @Override
     public void onDetach() {
@@ -130,8 +138,14 @@ public class FullTimeFragment extends Fragment implements DataFromAddEmployeeFra
     }
 
     @Override
-    public void getViewsFromAddEmployeeFragment(TextView id, TextView name, TextView age, TextView date, RadioGroup vehicle) {
+    public void getViewsFromAddEmployeeFragment(TextView id, TextView name, TextView age,
+                                                TextView date, RadioGroup vehicle) {
 
+        this.txtId= id;
+        this.txtName= name;
+        this.txtAge = age;
+        this.txtDateOfBirth = date;
+        this.radioVehicle = vehicle;
     }
 
 

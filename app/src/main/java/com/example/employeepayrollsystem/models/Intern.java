@@ -5,7 +5,7 @@ public class Intern extends Employee
     private String schoolname;
     private  double internSalary;
 
-    public Intern(int id, String name, int birthYear,String schoolname, double internSalary, Vehicle vehicle) {
+    public Intern(int id, String name, String birthYear,String schoolname, double internSalary, Vehicle vehicle) {
         super(id, name, birthYear, vehicle);
         this.schoolname = schoolname;
         this.internSalary = internSalary;

@@ -5,7 +5,7 @@ public class FullTime extends Employee
     private double salary;
     private double bonus;
 
-    public FullTime(int id, String name, int birthYear, double salary, double bonus, Vehicle vehicle) {
+    public FullTime(int id, String name, String birthYear, double salary, double bonus, Vehicle vehicle) {
         super(id, name, birthYear, vehicle);
         this.salary = salary;
         this.bonus = bonus;

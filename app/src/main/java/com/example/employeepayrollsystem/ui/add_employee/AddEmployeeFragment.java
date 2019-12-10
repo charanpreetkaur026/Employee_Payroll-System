@@ -105,6 +105,7 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
                         if(AddEmployeeFragment.this.fullTimeFragment  == null)
                         {
                             AddEmployeeFragment.this.fullTimeFragment = new FullTimeFragment();
+                            AddEmployeeFragment.this.fullTimeFragment.getViewsFromAddEmployeeFragment(id, text_name, text_age, text_date_of_birth, rgVehicle);
                         }
 
                         fragmentTransaction = AddEmployeeFragment.this.fragmentManager.beginTransaction();
@@ -116,6 +117,7 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
                         if(AddEmployeeFragment.this.internFragment  == null)
                         {
                             AddEmployeeFragment.this.internFragment = new InternFragment();
+                            AddEmployeeFragment.this.internFragment.getViewsFromAddEmployeeFragment(id, text_name, text_age, text_date_of_birth, rgVehicle);
                         }
 
                         fragmentTransaction = AddEmployeeFragment.this.fragmentManager.beginTransaction();

@@ -58,7 +58,7 @@ TextView id;
 
                         int id_int = Integer.parseInt(id.getText().toString());
                         String schoolname_string = schoolName.getText().toString();
-                        int birthyear_int = Integer.parseInt(txtDateOfBirth.getText().toString());
+                        String birthyear_int = txtDateOfBirth.getText().toString();
                         double internSalary_double = Double.parseDouble(internSalary.getText().toString());
                         String name_string = name.getText().toString();
                         int age_int = Integer.parseInt(age.getText().toString().substring(6));

@@ -10,12 +10,12 @@ public class Singleton {
         employees = new ArrayList<>();
 
         //create objects of employee classes here
-     CommissionbasedPartTime emp_cp = new CommissionbasedPartTime(1, "Preet", 1994, 14,
+     CommissionbasedPartTime emp_cp = new CommissionbasedPartTime(1, "Preet", "1994", 14,
              20, 2.5, new Car("Audi", "PB08", "A4"));
-     FixedBasedPartTime emp_fp = new FixedBasedPartTime(2, "deep", 21,14,50, 300, new Motorcycle("Royal Enfield", "PBO9", "Bullet"));
-     Intern emp_intern = new Intern(3,"Inder", 2000, "Lambton College in Toronto",1200.50,
+     FixedBasedPartTime emp_fp = new FixedBasedPartTime(2, "deep", "2001",14,50, 300, new Motorcycle("Royal Enfield", "PBO9", "Bullet"));
+     Intern emp_intern = new Intern(3,"Inder", "2000", "Lambton College in Toronto",1200.50,
              new Motorcycle("abc", "ABC123", "A1B2"));
-     FullTime emp_full1 = new FullTime(4, "Camy", 1994, 2500.30, 350,
+     FullTime emp_full1 = new FullTime(4, "Camy", "1994", 2500.30, 350,
              new Car("Nissan", "CAMYG", "xyz"));
 
 
