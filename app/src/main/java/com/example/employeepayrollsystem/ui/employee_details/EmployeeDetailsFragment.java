@@ -19,6 +19,8 @@ import com.example.employeepayrollsystem.models.Car;
 import com.example.employeepayrollsystem.models.CommissionbasedPartTime;
 import com.example.employeepayrollsystem.models.Employee;
 import com.example.employeepayrollsystem.models.FixedBasedPartTime;
+import com.example.employeepayrollsystem.models.FullTime;
+import com.example.employeepayrollsystem.models.Intern;
 import com.example.employeepayrollsystem.models.PartTime;
 import com.example.employeepayrollsystem.models.Vehicle;
 
@@ -27,9 +29,8 @@ public class EmployeeDetailsFragment extends Fragment implements DataFromEmploye
     Employee employee;
     Vehicle vehicle;
     TextView empId;
-    TextView name;
-    TextView age;
-    TextView txtVehicle;
+    TextView name, age, emptype, txtVehicle;
+    TextView internSchool;
     CardView vehicle_card;
     TextView txtModel, txtPlate, txtMake;
 
@@ -38,6 +39,7 @@ public class EmployeeDetailsFragment extends Fragment implements DataFromEmploye
     CardView intern_card;
     TextView employment_type;
     TextView total_earning;
+    Intern intern; FullTime fullTime; CommissionbasedPartTime commissionbasedPartTime; FixedBasedPartTime fixedBasedPartTime;
 
     private OnFragmentInteractionListener mListener;
 
@@ -72,11 +74,12 @@ public class EmployeeDetailsFragment extends Fragment implements DataFromEmploye
 //        this.empId = view.findViewById(R.id.text_)
         this.name = view.findViewById(R.id.text_name_value);
         this.age = view.findViewById(R.id.text_age_value);
+        this.emptype = view.findViewById(R.id.text_employment_type_value);
         this.txtVehicle = view.findViewById(R.id.text_vehicle_value);
         this.parttime_card = view.findViewById(R.id.parttime_card);
         this.fulltime_card = view.findViewById(R.id.fulltime_card);
         this.intern_card = view.findViewById(R.id.intern_card);
-        this.employment_type = view.findViewById(R.id.text_employment_type_value);
+        this.employment_type = view.findViewById(R.id.text_emptype_value);
         this.total_earning = view.findViewById(R.id.text_total_earning_val);
         this.txtMake = view.findViewById(R.id.text_make_value);
         this.txtModel = view.findViewById(R.id.text_model_value);
@@ -84,10 +87,12 @@ public class EmployeeDetailsFragment extends Fragment implements DataFromEmploye
 
         this.name.setText(employee.getName().toUpperCase());
         this.age.setText(employee.getAge()+"");
+
         this.txtVehicle.setText(employee.getVehicle() == null ? "null" : employee.getVehicle() instanceof Car ? "CAR" : "MOTER CYCLE");
 
             this.txtMake.setText(employee.getVehicle().getMake());
             this.txtPlate.setText(employee.getVehicle().getPlate());
+            this.txtModel.setText(employee.getVehicle().getModel());
 
         if(employee instanceof PartTime)
         {
@@ -104,20 +109,43 @@ public class EmployeeDetailsFragment extends Fragment implements DataFromEmploye
 
             if(employee instanceof CommissionbasedPartTime)
             {
-                this.employment_type.setText("COMMISSION BASED");
+                this.employment_type.setText("COMMISSION BASED");//for header label
+                this.emptype.setText("Commission Based Part Time");// for text view below age
                 commission_fixedamount_label.setText("COMMISSION");
-                commission_fixedamount_value.setText(((CommissionbasedPartTime) employee).getCommission()+"%");
+                commission_fixedamount_value.setText(((CommissionbasedPartTime) employee).getCommissionPerc()+"%");
                 this.total_earning.setText("$ "+((CommissionbasedPartTime)employee).calcCommissionEarnings());
 
             }
             else
             {
                 this.employment_type.setText("Fixed BASED");
+                this.emptype.setText("Fixed Based Part Time");// for text view below age
                 commission_fixedamount_label.setText("FIXED AMOUNT");
                 commission_fixedamount_value.setText("$ "+((FixedBasedPartTime) employee).getFixedAmount());
                 this.total_earning.setText("$ "+((FixedBasedPartTime)employee).calFixedAmountEarning());
             }
 
+        }else if(employee instanceof FullTime){
+            parttime_card.setVisibility(View.GONE);
+            intern_card.setVisibility(View.GONE);
+            this.employment_type.setText("FULL TIME");
+            this.emptype.setText("Full Time");// for text view below age
+
+            TextView salary = view.findViewById(R.id.text_salary_value);
+            TextView bonus = view.findViewById(R.id.text_bonus_value);
+
+            salary.setText("$ "+((FullTime) employee).getSalary());
+            bonus.setText("$ "+((FullTime) employee).getBonus());
+            this.total_earning.setText("$ "+ employee.calcEarning());
+        }else{
+            parttime_card.setVisibility(View.GONE);
+            fulltime_card.setVisibility(View.GONE);
+            this.employment_type.setText("INTERN");
+            this.emptype.setText("Intern");// for text view below age
+            this.internSchool = view.findViewById(R.id.text_school_value);
+            internSchool.setText(((Intern)employee).getSchoolname());
+
+            this.total_earning.setText("$ "+ employee.calcEarning());
         }
 
     }

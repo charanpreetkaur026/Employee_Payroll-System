@@ -2,20 +2,23 @@ package com.example.employeepayrollsystem.models;
 
 public class CommissionbasedPartTime extends  PartTime {
 
-    private float commission;
+    private double commissionPerc;
 
-    public float getCommission() { return commission; }
-
-    public void setCommission(int commission) { this.commission = commission; }
-
-    public CommissionbasedPartTime(int id, String name, int age, double earnings, int birthYear, int rate, float hours, float commission,Vehicle vehicle) {
-        super(id, name, age, earnings, birthYear,vehicle, rate, hours);
-        this.commission = commission;
+    public CommissionbasedPartTime(int id, String name, String birthYear, float rate, float hoursWorked,double commissionPerc, Vehicle vehicle) {
+        super(id, name, birthYear, rate, hoursWorked, vehicle);
+        this.commissionPerc = commissionPerc;
     }
+
+
+    public double getCommissionPerc() { return commissionPerc; }
+
+    public void setCommissionPerc(int commissionPerc) { this.commissionPerc = commissionPerc; }
+
+
     public  double calcCommissionEarnings(){
         double commissionEarning;
         double earn = (this.getHours()*this.getRate());
-        commissionEarning = (this.getCommission()/100*earn)+earn;
+        commissionEarning = (this.getCommissionPerc()/100*earn)+earn;
         return  commissionEarning;
     }
 }

@@ -5,12 +5,12 @@ public abstract class Employee {
     private String name = "";
     private int age;
     double earnings;
-    private int birthYear = 0 ;
+    private String birthYear;
     private Vehicle vehicle;
 
 
 
-    public Employee(int id, String name, int age, Vehicle vehicle)
+    public Employee(int id, String name, String birthYear, Vehicle vehicle)
     {
         this.id = id;
         this.name = name;
@@ -54,9 +54,9 @@ public abstract class Employee {
 
     public void setEarnings(double earnings) { this.earnings = earnings; }
 
-    public int getBirthYear() { return birthYear; }
+    public String getBirthYear() { return birthYear; }
 
-    public void setBirthYear(int birthYear) { this.birthYear = birthYear; }
+    public void setBirthYear(String birthYear) { this.birthYear = birthYear; }
     public  double calcEarning(){
         return  1000;
     }

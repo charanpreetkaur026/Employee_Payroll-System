@@ -2,16 +2,20 @@ package com.example.employeepayrollsystem.models;
 
 public class FixedBasedPartTime extends PartTime {
 
-    private float fixedAmount;
-    public FixedBasedPartTime(int id, String name, int age, double earnings, int birthYear,
-                              int rate, float hoursWorked, float fixedamount, Vehicle vehicle) {
-        super(id, name, age, earnings, birthYear, vehicle, rate, hoursWorked);
-        this.fixedAmount = fixedamount;
+    private double fixedAmount;
+
+    public FixedBasedPartTime(int id, String name, String birthYear, float rate, float hoursWorked,double fixedAmount, Vehicle vehicle) {
+        super(id, name, birthYear, rate, hoursWorked, vehicle);
+        this.fixedAmount = fixedAmount;
     }
 
-    public float getFixedAmount() { return fixedAmount; }
+
+    public double getFixedAmount() { return fixedAmount; }
 
     public void setFixedAmount(float fixedAmount) { this.fixedAmount = fixedAmount; }
+//    public String getEmpType(){
+//        return empType;
+//    }
     public double calFixedAmountEarning()
     {
         double earn = this.getHours() * this.getRate();

@@ -2,16 +2,17 @@ package com.example.employeepayrollsystem.models;
 
 public class FullTime extends Employee
 {
-    private int salary;
-    private int bonus;
+    private double salary;
+    private double bonus;
 
-    public FullTime(int salary, int bonus, int id, String name, int age, Vehicle vehicle) {
-        super(id, name,age,vehicle);
+    public FullTime(int id, String name, String birthYear, double salary, double bonus, Vehicle vehicle) {
+        super(id, name, birthYear, vehicle);
         this.salary = salary;
         this.bonus = bonus;
     }
 
-    public int getSalary()
+
+    public double getSalary()
     {
         return salary;
     }
@@ -21,7 +22,7 @@ public class FullTime extends Employee
         this.salary = salary;
     }
 
-    public int getBonus()
+    public double getBonus()
     {
         return bonus;
     }
@@ -31,6 +32,8 @@ public class FullTime extends Employee
         this.bonus = bonus;
     }
 
-    
-
+    @Override
+    public double calcEarning() {
+        return this.getSalary()+this.getBonus();
+    }
 }
