@@ -83,18 +83,18 @@ public class CommissionBasedFragment extends Fragment implements DataFromPartTim
                     Singleton.getSingletonObjObj().addtoList(new CommissionbasedPartTime
                             (id_int, name_string, age_int, commission_int, rate_int, hours_float, vehicle_Vehicle));
                     Toast.makeText(getActivity(), "Employee Added", Toast.LENGTH_LONG).show();
-                    commission.setText(null);
-                    ratePerHour.setText(null);
-                    numberOfHours.setText(null);
-                    name.setText(null);
-                    age.setText(null);
-                    dateOfBirth.setText(SpanningForString.forDate("DateOfBirth : YYYY/MM/DD"));
-                    gender.clearCheck();
-                    vehicle.clearCheck();
+                    txtCommission.setText(null);
+                    txtRatePerHour.setText(null);
+                    txtNumberOfHours.setText(null);
+                    txtName.setText(null);
+                    txtAge.setText(null);
+                    txtDateOfBirth.setText("DateOfBirth : YYYY/MM/DD");
+                    rgVehicle.clearCheck();
 
                 }
                 else
                 {
+                    //show alert dailog
                     Toast.makeText(getActivity(), "No field can be empty and unselected" , Toast.LENGTH_LONG).show();
                 }
 

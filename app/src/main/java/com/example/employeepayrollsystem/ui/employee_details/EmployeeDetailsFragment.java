@@ -112,7 +112,7 @@ public class EmployeeDetailsFragment extends Fragment implements DataFromEmploye
                 this.employment_type.setText("COMMISSION BASED");//for header label
                 this.emptype.setText("Commission Based Part Time");// for text view below age
                 commission_fixedamount_label.setText("COMMISSION");
-                commission_fixedamount_value.setText(((CommissionbasedPartTime) employee).getCommission()+"%");
+                commission_fixedamount_value.setText(((CommissionbasedPartTime) employee).getCommissionPerc()+"%");
                 this.total_earning.setText("$ "+((CommissionbasedPartTime)employee).calcCommissionEarnings());
 
             }
