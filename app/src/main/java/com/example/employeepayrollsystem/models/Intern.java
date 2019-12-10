@@ -5,17 +5,12 @@ public class Intern extends Employee
     private String schoolname;
     private  double internSalary;
 
-//    public Intern() {
-//        super();
-//    }
-
-
-
-    public Intern( String schoolname, double internSalary, int id,String name, int age , Vehicle vehicle ) {
-        super(id,name,age,vehicle);
+    public Intern(int id, String name, int birthYear,String schoolname, double internSalary, Vehicle vehicle) {
+        super(id, name, birthYear, vehicle);
         this.schoolname = schoolname;
         this.internSalary = internSalary;
     }
+
 
     public String getSchoolname()
     {

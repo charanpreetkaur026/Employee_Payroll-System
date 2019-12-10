@@ -72,6 +72,7 @@ public class FullTimeFragment extends Fragment implements DataFromAddEmployeeFra
                         &&  !txtAge.getText().toString().isEmpty()) {
                     int id_int = Integer.parseInt(txtId.getText().toString());
                     String name_string = txtName.getText().toString();
+                    int birthyear_int = Integer.parseInt(txtDateOfBirth.getText().toString());
                     int age_int = Integer.parseInt(txtAge.getText().toString().substring(6));
                     int salary_int = Integer.parseInt(txtSalary.getText().toString());
                     int bonus_int = Integer.parseInt(txtBonus.getText().toString());
@@ -87,7 +88,7 @@ public class FullTimeFragment extends Fragment implements DataFromAddEmployeeFra
 
                     }
                     Singleton.getSingletonObjObj().addtoList(new
-                            FullTime(salary_int, bonus_int,id_int,name_string,age_int, vehicle_Vehicle ));
+                            FullTime(id_int, name_string, birthyear_int,salary_int, bonus_int, vehicle_Vehicle ));
                     Toast.makeText(getActivity(), "Employee Added", Toast.LENGTH_LONG).show();
                     txtSalary.setText(null);
                     txtBonus.setText(null);

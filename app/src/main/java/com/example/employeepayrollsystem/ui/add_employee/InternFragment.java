@@ -1,7 +1,5 @@
 package com.example.employeepayrollsystem.ui.add_employee;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -28,7 +26,7 @@ public class InternFragment extends Fragment  implements DataFromAddEmployeeFrag
 TextView id;
         TextView name;
         TextView age;
-        TextView dateOfBirth;
+        TextView txtDateOfBirth;
         RadioGroup vehicle;
         TextView schoolName, internSalary;
         Button addIntern;
@@ -60,6 +58,7 @@ TextView id;
 
                         int id_int = Integer.parseInt(id.getText().toString());
                         String schoolname_string = schoolName.getText().toString();
+                        int birthyear_int = Integer.parseInt(txtDateOfBirth.getText().toString());
                         double internSalary_double = Double.parseDouble(internSalary.getText().toString());
                         String name_string = name.getText().toString();
                         int age_int = Integer.parseInt(age.getText().toString().substring(6));
@@ -74,12 +73,12 @@ TextView id;
 
                         }
                         Singleton.getSingletonObjObj().addtoList(new
-                                Intern(schoolname_string,internSalary_double,id_int, name_string, age_int, vehicle_Vehicle ));
+                                Intern(id_int, name_string, birthyear_int,schoolname_string,internSalary_double, vehicle_Vehicle ));
                         Toast.makeText(getActivity(), "Employee Added", Toast.LENGTH_LONG).show();
                         schoolName.setText(null);
                         name.setText(null);
                         age.setText(null);
-                        dateOfBirth.setText("DateOfBirth : YYYY/MM/DD");
+                        txtDateOfBirth.setText("DateOfBirth : YYYY/MM/DD");
                         vehicle.clearCheck();
 
 
@@ -110,7 +109,7 @@ TextView id;
         this.id = id;
         this.name = name;
         this.age = age;
-        this.dateOfBirth = date;
+        this.txtDateOfBirth = date;
         this.vehicle = vehicle;
     }
 }
