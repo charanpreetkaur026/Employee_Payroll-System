@@ -79,17 +79,6 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
             }
             }
         });
-
-
-
-
-
-
-
-
-
-
-
         this.employementtype.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
         {
             @Override
