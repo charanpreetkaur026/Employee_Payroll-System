@@ -8,14 +8,16 @@ import android.os.Handler;
 
 public class SplashActivity extends AppCompatActivity {
 
+    Handler handler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        handler=new Handler();
 
 
 
-        new Handler().postDelayed(new Runnable() {
+        handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 Intent mIntent= new Intent(SplashActivity.this,LoginActivity.class);
