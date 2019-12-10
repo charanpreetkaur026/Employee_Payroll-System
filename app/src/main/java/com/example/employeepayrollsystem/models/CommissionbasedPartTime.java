@@ -4,10 +4,11 @@ public class CommissionbasedPartTime extends  PartTime {
 
     private double commissionPerc;
 
-    public CommissionbasedPartTime(int id, String name, int age, int rate, float hoursWorked, double commissionPerc, Vehicle vehicle) {
-        super(id, name, age, vehicle, rate, hoursWorked);
+    public CommissionbasedPartTime(int id, String name, int birthYear, float rate, float hoursWorked,double commissionPerc, Vehicle vehicle) {
+        super(id, name, birthYear, rate, hoursWorked, vehicle);
         this.commissionPerc = commissionPerc;
     }
+
 
     public double getCommissionPerc() { return commissionPerc; }
 
