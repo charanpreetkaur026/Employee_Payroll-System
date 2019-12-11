@@ -10,7 +10,7 @@ Komaldeep Kaur(C0766343)
 GitScrum:
 https://gitscrum.com/charanpreetkaur026/group5-f2019-mad3125-fp/planning
 
-| SL No         | Image               |        Description |
+| Sr. No.         | Image               |        Description |
 |---------------|---------------------|--------------------|  
 1 | <img src="https://user-images.githubusercontent.com/55303195/70644956-05c4e400-1c12-11ea-90c6-74efd40e105d.png" width="100" height="120"/>| Splash Screen|
 2 | <img src="https://user-images.githubusercontent.com/55303195/70644968-09f10180-1c12-11ea-9b63-b335efe231c6.png" width="100" height="120"/> | User Login Screen With Hard Coded values and disabled fields
