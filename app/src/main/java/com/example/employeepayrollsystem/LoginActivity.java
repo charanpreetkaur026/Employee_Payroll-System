@@ -37,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
 //                }else {
 //                    btnLogin.setAlpha(.5f);
 //                    edtEmail.setError("Please enter valid email or password");
-//                    showAlert();
+//                    showHelp();
 //                }
             }
         });
