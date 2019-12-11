@@ -17,8 +17,8 @@ https://gitscrum.com/charanpreetkaur026/group5-f2019-mad3125-fp/sprint/add-emplo
 3 | <img src="https://user-images.githubusercontent.com/55303195/70644972-0b222e80-1c12-11ea-81c8-2261c2b67b1d.png" width="100" height="120"/> | Home Activity
 4 | <img src="https://user-images.githubusercontent.com/55303195/70644962-08bfd480-1c12-11ea-9321-307b55f4bb2f.png" width="100" height="120"/> | Navigation Drawer
 5 | <img src="https://user-images.githubusercontent.com/55303195/70647141-4aeb1500-1c16-11ea-958d-65bba9df9fa8.png" width="100" height="120"/> | Employee List with Recycler View
-6 | <img src="https://user-images.githubusercontent.com/55303195/70580519-1ded2280-1b82-11ea-8c65-f0d38c7bd75f.PNG" width="100" height="120"/> | Employee Details(Part Time)
-7 | <img src="https://user-images.githubusercontent.com/55303195/70580519-1ded2280-1b82-11ea-8c65-f0d38c7bd75f.PNG" width="100" height="120"/> | Employee Details(Intern)
+6 | <img src="https://user-images.githubusercontent.com/55303195/70647976-2132ed80-1c18-11ea-90ef-42d0c46fd541.png" width="100" height="120"/> | Employee Details(Part Time)
+7 | <img src="https://user-images.githubusercontent.com/55303195/70648065-4cb5d800-1c18-11ea-96f6-3aaf9ff8a099.png" width="100" height="120"/> | Employee Details(Intern)
 8 | <img src="https://user-images.githubusercontent.com/55303195/70644976-0c535b80-1c12-11ea-9f4a-79244ac18b5a.png" width="100" height="120"/> | Add Employee Screen
 9 | <img src="https://user-images.githubusercontent.com/55303195/70644976-0c535b80-1c12-11ea-9f4a-79244ac18b5a.png" width="100" height="120"/> | Adding Vehicle for Employee
 11 | <img src="https://user-images.githubusercontent.com/55303195/70644952-03fb2080-1c12-11ea-8a4d-84160aee604c.png" width="100" height="120"/> | Entering Full Time Employee details
