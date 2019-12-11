@@ -8,7 +8,7 @@ Charanpreet Kaur (C0766112)
 Komaldeep Kaur(C0766343)
 
 GitScrum:
-https://gitscrum.com/charanpreetkaur026/group5-f2019-mad3125-fp/sprint/add-employee-functionality-5deef74cad635# 
+https://gitscrum.com/charanpreetkaur026/group5-f2019-mad3125-fp/planning
 
 | SL No         | Image               |        Description |
 |---------------|---------------------|--------------------|  
