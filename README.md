@@ -6,7 +6,7 @@ https://gitscrum.com/charanpreetkaur026/group5-f2019-mad3125-fp/sprint/add-emplo
 | SL No         | Image               |        Description |
 |---------------|---------------------|--------------------|  
 1 | <img src="https://user-images.githubusercontent.com/55303195/70580519-1ded2280-1b82-11ea-8c65-f0d38c7bd75f.PNG" width="250" height="350"/>| Splash Screen|
-2 | <img src="https://user-images.githubusercontent.com/55303195/70580519-1ded2280-1b82-11ea-8c65-f0d38c7bd75f.PNG" width="250"/> | User Login Screen With Hard Coded values and disabled fields
+2 | <img src="https://user-images.githubusercontent.com/55303195/70644968-09f10180-1c12-11ea-9b63-b335efe231c6.png" width="250"/> | User Login Screen With Hard Coded values and disabled fields
 3 | <img src="https://user-images.githubusercontent.com/55303195/70580519-1ded2280-1b82-11ea-8c65-f0d38c7bd75f.PNG" width="250"/> | Home Activity 
 4 | <img src="https://user-images.githubusercontent.com/55303195/70580519-1ded2280-1b82-11ea-8c65-f0d38c7bd75f.PNG" width="250"/> | Navigation Drawer
 5 | <img src="https://user-images.githubusercontent.com/55303195/70580519-1ded2280-1b82-11ea-8c65-f0d38c7bd75f.PNG" width="250"/> | Employee List with Recycler View
