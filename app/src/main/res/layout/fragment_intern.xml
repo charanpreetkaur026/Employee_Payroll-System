@@ -31,11 +31,14 @@
             android:padding="10dp"/>
 
     </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/btn_addIntern"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/barbrown"
         android:padding="10dp"
-        android:text="Add Intern"/>
+        android:text="Add Intern"
+        android:textColor="@color/white" />
 
 </LinearLayout>

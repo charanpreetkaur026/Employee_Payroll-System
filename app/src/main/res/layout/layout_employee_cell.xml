@@ -17,13 +17,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/emp_Id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="employee id" />
+                android:text="employee id"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/emp_name"
@@ -31,15 +33,9 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="employee name" />
+                android:text="employee name"
+                android:textColor="@color/black" />
 
-            <TextView
-                android:id="@+id/emp_age"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="employee age" />
 
 
 

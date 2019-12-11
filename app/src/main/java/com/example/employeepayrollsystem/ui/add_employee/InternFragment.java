@@ -1,5 +1,6 @@
 package com.example.employeepayrollsystem.ui.add_employee;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -21,6 +22,7 @@ import com.example.employeepayrollsystem.models.Intern;
 import com.example.employeepayrollsystem.models.Motorcycle;
 import com.example.employeepayrollsystem.models.Singleton;
 import com.example.employeepayrollsystem.models.Vehicle;
+import com.example.employeepayrollsystem.ui.Employees.EmployeesFragment;
 
 public class InternFragment extends Fragment  implements DataFromAddEmployeeFragment {
 TextView id;
