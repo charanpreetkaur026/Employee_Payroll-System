@@ -8,22 +8,27 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <EditText
             android:id="@+id/text_fixamount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
+            android:drawableLeft="@drawable/ic_attach_money_black_24dp"
             android:ems="10"
+            android:hint="Enter Fixed amount"
             android:inputType="number"
-            android:padding="10dp"
-            android:hint="Enter Fixed amount"/>
+            android:padding="10dp" />
     </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/btn_add_fixed_based"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Employee PartTime FixedBased" />
+        android:background="@color/barbrown"
+        android:text="@string/button_add_emp"
+        android:textColor="@color/white" />
 
 
 </LinearLayout>

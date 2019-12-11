@@ -24,12 +24,6 @@
         tools:layout="@layout/fragment_add_employee" />
 
     <fragment
-        android:id="@+id/nav_add_vehicle"
-        android:name="com.example.employeepayrollsystem.ui.add_vehicle.AddVehicleFragment"
-        android:label="@string/menu_vehicle"
-        tools:layout="@layout/fragment_add_vehicle" />
-
-    <fragment
         android:id="@+id/nav_help"
         android:name="com.example.employeepayrollsystem.ui.help.HelpFragment"
         android:label="@string/menu_help"
@@ -39,5 +33,5 @@
         android:id="@+id/nav_logout"
         android:name="com.example.employeepayrollsystem.ui.Logout.LogoutFragment"
         android:label="@string/menu_employees"
-        tools:layout="@layout/fragment_contactus" />
+        />
 </navigation>

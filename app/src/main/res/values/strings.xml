@@ -20,6 +20,8 @@
 
     <string name="homefragment_message">Welcome to the Employee Payroll System. select your choice to navigate from navigation drawer</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button_add_emp">Add Payroll</string>
+
 </resources>

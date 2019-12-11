@@ -48,7 +48,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Employee name."
+                    android:hint="Employee name"
                     android:inputType="textPersonName"
                     android:padding="10dp"
                     android:textColor="@color/black" />
