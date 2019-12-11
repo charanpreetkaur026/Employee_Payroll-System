@@ -22,13 +22,15 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <EditText
             android:id="@+id/text_internSalary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_attach_money_black_24dp"
             android:ems="10"
             android:hint="Intern Salary"
-            android:padding="10dp"/>
+            android:padding="10dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -38,7 +40,7 @@
         android:layout_height="wrap_content"
         android:background="@color/barbrown"
         android:padding="10dp"
-        android:text="Add Intern"
+        android:text="@string/button_add_emp"
         android:textColor="@color/white" />
 
 </LinearLayout>

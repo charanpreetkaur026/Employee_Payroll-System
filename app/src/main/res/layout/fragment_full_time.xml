@@ -15,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:drawableLeft="@drawable/ic_attach_money_black_24dp"
             android:ems="10"
             android:hint="Salary amount"
             android:inputType="number" />
@@ -30,6 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:drawableLeft="@drawable/ic_attach_money_black_24dp"
             android:ems="10"
             android:hint="Bonus amount"
             android:inputType="number" />
@@ -42,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/barbrown"
-        android:text="Add fulltime employee"
+        android:text="@string/button_add_emp"
         android:textColor="@color/white" />
 
 
