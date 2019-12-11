@@ -1,8 +1,7 @@
 # Employee_Payroll-System
 # BankingSystemAndroid
 GitScrum:
-https://gitscrum.com/charanpreetkaur026/group5-f2019-mad3125-fp/sprint/add-employee-functionality-5deef74cad635#
-Github:
+https://gitscrum.com/charanpreetkaur026/group5-f2019-mad3125-fp/sprint/add-employee-functionality-5deef74cad635# 
 
 | SL No         | Image               |        Description |
 |---------------|---------------------|--------------------|  
