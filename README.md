@@ -1,5 +1,12 @@
 # Employee_Payroll-System
-# BankingSystemAndroid
+Group5_F2019_MAD3125_FP
+
+Group Memebers:
+
+Charanpreet Kaur (C0766112)
+
+Komaldeep Kaur(C0766343)
+
 GitScrum:
 https://gitscrum.com/charanpreetkaur026/group5-f2019-mad3125-fp/sprint/add-employee-functionality-5deef74cad635# 
 
@@ -26,3 +33,4 @@ https://gitscrum.com/charanpreetkaur026/group5-f2019-mad3125-fp/sprint/add-emplo
 
 Refernces:
 http://solutionoptimist.com/awesome-github-tricks/
+
