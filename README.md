@@ -21,7 +21,7 @@ https://gitscrum.com/charanpreetkaur026/group5-f2019-mad3125-fp/sprint/add-emplo
 14 | <img src="https://user-images.githubusercontent.com/55303195/70580519-1ded2280-1b82-11ea-8c65-f0d38c7bd75f.PNG" width="100" height="120"/> | Entering Fixed Based Part Time Employee details
 15 | <img src="https://user-images.githubusercontent.com/55303195/70580519-1ded2280-1b82-11ea-8c65-f0d38c7bd75f.PNG" width="100" height="120"/> | Entering Intern details
 16 | <img src="https://user-images.githubusercontent.com/55303195/70580519-1ded2280-1b82-11ea-8c65-f0d38c7bd75f.PNG" width="100" height="120"/> | Added Employee displayed in Employee List
-17 | <img src="https://user-images.githubusercontent.com/55303195/70580519-1ded2280-1b82-11ea-8c65-f0d38c7bd75f.PNG" width="100" height="120"/> | Help Alert Dailog 
+17 | <img src="https://user-images.githubusercontent.com/55303195/70644958-06f61100-1c12-11ea-9638-bb64ea997db7.png" width="100" height="120"/> | Help Alert Dailog 
 18 | <img src="https://user-images.githubusercontent.com/55303195/70580519-1ded2280-1b82-11ea-8c65-f0d38c7bd75f.PNG" width="100" height="120"/> | Logout
 
 Refernces:
